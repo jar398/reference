@@ -1,0 +1,311 @@
+Demystifying compositional semantics - a prospectus
+
+* Forward
+
+This document is not intended to be a complete report but rather an
+outline or prospectus.  Its purpose is to help recruit collaborators
+and readers for future versions.
+
+* Introduction
+
+Compositional semantics is a system whereby a sentence composed 
+
+of parts (words, phrases) comes to have a meaning that derives from
+the meanings 
+
+of the parts.  Use of compositional semantics is the distinctive and
+most consequential way in which the human species differs from other
+living things.  It creates the situation where sentences that have
+never before been uttered can be understood by agents that have never
+heard them. My aim here is to explain how to reduce compositional
+semantics to physical phenomena. By doing so we would be able to get
+free of its apparently magical, subjective, "intentional" nature and
+subject it to scientific scrutiny and engineering.
+
+[see SEP article on Compositionality]
+
+* World
+
+This document describes a model of agency and semantics.
+
+The world is the entire system being modeled; everything, over all
+time, that we care about for expository purposes.
+
+The world is in some state at any given time.
+
+(Yes of course the real world has relativity and so on.  This is not a
+theory of everything.)
+
+** Variable
+
+A variable is something that varies; it takes on various values
+depending on something else.  I will use the word specifically to mean
+something that varies with time (its value is a function of time) and
+whose value is determined by the state of the world and/or present or
+future world states (i.e. a <world, time> pair).
+
+It is sometimes useful to speak of the probability distribution of a
+variable.  We can do that by specifying some region of the world
+(restricted in space and time) over which we can compute distributions
+in the usual way (probability theory).
+
+** Proposition
+
+A proposition is a variable whose value is a truth value (true or false).
+
+The state of the world at time T is 'isoontic' with the aggregate of
+all values of all propositions at time T.  That is, states can be
+distinguished by propositions.
+
+Maybe we don't need propositions ?? let's see.
+
+* Objects
+** Goes with
+
+Given variables X and Y and some region of the world, consider the
+mutual information of X and Y, i.e. the amount of information about Y
+that we obtain by observing X (or vice versa).
+https://en.wikipedia.org/wiki/Mutual_information
+
+If the mutual information is high, i.e. if knowing X is nearly as good
+as knowing Y, I'll say that X "goes with" Y or that X and Y "go
+together".
+
+Just how high the mutual information needs to be in the following is
+unclear to me and is probably context dependent.  I will figure this
+out later.  For now just assume some threshold I guess.
+
+** Object
+
+From a set of variables K = {X1, X2, ... Xn} we can ask, what other
+variables can be predicted from the variables in K (over some region)?
+The collection of all such variables would be a larger set K'
+containing K.
+
+Since variables that are merely functions of the variables in K cannot
+have any new information, we are really asking about regularities in
+the world: what can we predict about the world based on what we
+already know?
+
+I'm going to call K' an 'object', and K an 'identifier' for the object.
+
+(Yes I'm playing fast and loose with the cardinality of K'.  There is
+also some question about the properties of these maximal collections
+K': are they unique etc.  Future work.)
+
+If K' doesn't add 'much' to K, then we don't have much of an object.
+It would be nice to have a way to exclude random collections of
+variables as identifying sets.
+
+Note that multiple distinct sets K, even minimal ones (no subset
+also identifies K'), could identify the same object K'.  That is, an
+object might be identified in a variety of ways.
+
+** Property
+
+A variable is a property of an object if it belongs to the object's
+variable set K'.
+
+** Aboutness
+
+I want to say: a variable is about an object iff its value is
+sensitive to the properties of the object, i.e. there is some change
+to the truth of a set of properties that would cause the truth value
+of the variable to change.
+
+But this needs to be made more precise.  E.g. what region(s) are we
+talking about?
+
+* Agents
+** Sensors and actuators
+
+An agent is something that acts on the world; not passively like a
+rock or hammer, but actively.  Examples: robot, human, vervet monkey,
+character in a game.
+
+'Act on the world' means exerting a force, either substantial force
+such as locomotion or breaking something, or light force such as
+altering the voltage level on a wire, emitting light from a display,
+or generating a sound.
+
+A particular way in which an agent is able to act is called an
+'actuator'.  Think of these as muscles, motors, or lights.
+
+To do anything sensible an agent also has to be able to sense its
+environment and detect forces that are applied to it.  That is, an
+agent transduces information from its environment, together
+with its memory of what has happened before, to form additional
+memories and/or to decide how to act on its environment.
+
+Thus, sensors.
+
+** Virtual sensors and actuators
+
+An agent may take in sensor information in a series of processing steps.
+
+At the agent/environment interface, there is a physical linkage
+between the state of some part of the environment and the state of
+some part of the agent.  I'll call the environment-adjacent agent part
+a 'peripheral sensor'.
+
+Typically there is 'circuitry' to process and combine signals coming
+from sensors.  The output point of such circuitry might be called a
+'virtual sensor'.  For simplicity I will simply use the word 'sensor'
+for either a sensor or a virtual sensor.  If readers object I will
+reconsider this terminology.
+
+The same reasoning works in reverse to yield the idea of a virtual
+actuator, whose action devolves into the action of more 'primitive'
+actuators.
+
+An important example of such ciruitry is tracking.  As something in
+the environment moves, or as the agent or one of its sensor-carrying
+parts (e.g. eye or ear) moves, 
+
+** Variables corresponding to sensors and actuators
+
+For any sensor, and any state the sensor might take on, it is useful
+to consider the variable whose value at any time is the sensor's state
+at that time.  If it is in that state, that means the world is such
+that the sensor will be in that state.
+
+** Payoff
+
+Agents may derive benefit or harm from events in the world, including
+their own actions.  The benefit or harm is detected through their
+senses.  I think of the payoff as a numerical quantity, intended to
+model fitness (in an evolved species), money (in a commercial
+product), points (in a game), happiness, etc.  But I do not care to
+develop this formally.
+
+** Cooperation
+
+When two agents interact, the interaction is called cooperative if the
+payoff to both agents is positive.  Otherwise, it is ... not.
+
+When the payoff is positive for one but not the other, the
+interactions is exploitative.
+
+Voluntary non-cooperative interactions tend to be extinguished over
+time, since the losing agent will tend to learn to stay out of them.
+
+Ordinarily we would judge cooperation by intent; that is, an agent
+might intend to produce positive payoffs, but might 'make a mistake'
+or 'be the victim of bad information' or the interaction might not
+turn out well due to 'bad luck'.  We might still call their behavior
+cooperative.  If cooperation were the focus of this prospectus, it
+would be important to handle this detail.
+
+* Perception
+
+Common sense tells us that agents perceive objects, but this has to be
+explained in terms of the apparatus built up so far (variables,
+sensors, ...).
+
+Sensors read variables out of the world; they obtain information from
+the agent's environment.  The agent can detect which variables
+(thus read) go which other ones, and can form 'object hypotheses'.
+
+If two agents are together in a region, they are 'likely' to form
+similar object hypotheses when looking at the same parts of the
+region.  This is because the world has physically dictated the agents'
+peripheral perceptions.
+
+And these object hypotheses are similarly likely to be compatible with
+actual objects.
+
+* Communication
+** Channel
+
+A channel connects two agents A and B so that they can interact.  One
+agent, the 'speaker' or 'sender' or 'writer', can change the state of
+the channel, and the other, the 'listener' or 'receiver' or 'reader',
+can sense the state.
+
+B is thereby connected indirectly to A's sensors, and A is connected
+indirectly to B's actuators.
+
+** Sentence
+
+The state of a channel is called a 'call' or a 'sentence'.
+A call might be atomic (as in the call of a vervet monkey) or
+compound (as in a multi-word human or robot sentence).
+
+** Sayability
+
+A sentence is sayable if, when the sender sends it, the outcome is a
+cooperative interaction between A and B.
+
+** Sentence meaning
+
+The meaning of a sentence is a proposition; specifically, the
+proposition that is true iff the sentence is sayable.
+
+* Compositional communication
+** Sentence parts
+
+Sentences in natural language come in a variety of forms that might be
+called compositional, but the canonical structure of a subject phrase
+composed with a predicate phrase is at the core of language;
+everything else is an elaboration.
+
+** Reference
+
+We come to the motivating question now: Suppose somebody makes a claim
+that some phrase N refers to some object O.  How do we assess the
+truth of such a claim?
+
+The model leads to the following definition of reference:
+
+    A noun phrase N refers to object O iff for every sentence S having
+    N as its subject phrase, S means a proposition that is about O.
+
+Every part of the model rests on a foundation of variables, sentences,
+and sayability.  These are all external phenomena that can be observed
+and measured.  There is no appeal to 'mental models' or 'concepts'.
+We are led to the definition because there is no choice.
+
+How well this matches the way "reference" is used in ordinary language
+remains to be seen.
+
+** Assessing meaning and reference
+
+Assays of meaning (sayability) cannot be exhaustive because we would
+have to measure payoffs in a vast number of world states, while
+controlling for agents' memories (experience).  This might be possible
+in a laboratory setting, but is not practical in any realistic
+setting.  We can, however, make pretty good hypotheses of meaning with
+limited data, by applying common sense assumptions and seeking the
+best hypotheses that fit available data.
+
+Similarly, because there are so many predicate phrases that might
+combine with noun phrase N to form sentences, we cannot enumerate and
+test them all, and we may have to use heuristics to determine
+reference.
+
+These definitions of meaning and reference may be exact, but in
+practice, meaning and reference are unknowable.  This may feel
+unsatisfactory, but remember that there is no knowledge in science at
+all, just hypotheses that fit available data better or worse than one
+another.
+
+* Other topics TBD
+** Prior work
+
+Leibniz, Frege, Russell, Wittgenstein, Quine, Millikan, Horwich,
+Gopnik, Harman, Yablo, many others.
+
+Much indebted to Brian Cantwell Smith.
+
+** Change
+
+The framework implies some position on the Ship of Theseus.  What is it?
+
+** Mereology
+** Species
+** Child development
+
+Infants learn meaning quickly and apparently with very little data.
+Is what an infant does consistent with what I've outlined?
+
+** What does this have to do with HTTPrange-14?
