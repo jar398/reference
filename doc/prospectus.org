@@ -250,32 +250,72 @@ agent, the 'speaker' or 'sender' or 'writer', can change the state of
 the channel, and the other, the 'listener' or 'receiver' or 'reader',
 can sense the state.
 
-B is thereby connected indirectly to A's sensors, and A is connected
-indirectly to B's actuators.
+B is thereby connected indirectly to A's actuators, and A is connected
+indirectly to B's sensors.  The forces involved are typically gentle.
+Communication does not result in any direct physical payoff or loss to
+the participants [notwithstanding the 'handicap principle' and
+expensive media; TBD].
 
 ** Sentence
 
-The state of a channel is called a 'call' or a 'sentence'.
-A call might be atomic (as in the call of a vervet monkey) or
-compound (as in a multi-word human or robot sentence).
+The state of a channel is called a 'call' or a 'sentence' or a 'message'.
+
+An 'atomic' sentence is one without independently meaningful parts
+(e.g. the call of a vervet monkey or cry of a baby).  A 'compound' or
+'composed' sentence has parts (as in a multi-word sentence uttered by
+an adult human or robot).
 
 ** Sayability
 
-A sentence is sayable if, when the sender sends it, the outcome is a
-cooperative interaction between A and B.
+Suppose A is communicating with B over a channel.
+A sentence is sayable in a context if, when A says it, the
+outcome is a cooperative (positive payoff) interaction between A and B.
+
+A positive payoff to B can result if the sentence 'provides useful
+information'.  A is acting, in effect, as an extension of B's sensors.
+Such sentences are called declarative.  They have an expected positive
+payoff to B.  A may receive an indirect positive payoff via
+reciprocation, inclusive fitness, amortization, or in some other way.
+
+A positive payoff to A can result from B doing something on A's
+behalf.  B is acting, in effect, as an extension of A's actuators.  We
+call these imperative sentences.  They have an expected positive
+payoff to A, and an indirect payoff to B.
+
+A question is an imperative sentence that requests information (an
+answer).
+
+Conventionally we would speak of a sentence being true, rather than
+being sayable, but there is no effective way to assess truth other
+than by looking whether the sentence has a 'good' vs. 'bad' effect on
+other agents.  Sayability is an idea that makes sense in terms of
+biology and evolution; it does not require appeal to cognition or
+metaphysics.  This is not to say truth is meaningless; it is just not
+helpful in this analysis to attribute it to the agents' communication.
+
+It many situations it would be natural to use sayability as evidence
+of truth, and non-sayability as evidence of falsity, so it is easy and
+probably not too harmful to confuse sayability and truth.
 
 ** Sentence meaning
 
-The meaning of a sentence is a proposition; specifically, the
-proposition that is true iff the sentence is sayable.
+The meaning of a sentence is a proposition; specifically, a
+proposition that is true if and only if the sentence is sayable.
+
+Presumably the sentence is sayable (or not) in some sense _because_
+the proposition is true (false), but such causation would usually be
+complex.  Fortunately we don't need to understand what the causation
+is.
 
 * Compositional communication
 ** Sentence parts
 
-Sentences in natural language come in a variety of forms that might be
-called compositional, but the canonical structure of a subject phrase
-composed with a predicate phrase is at the core of language;
-everything else is an elaboration.
+Sentences in natural language come in a variety of compositional
+forms, but the canonical structure of a subject phrase composed with a
+predicate phrase is at the core of language; everything else
+(prepositional clauses, conjunctions, appositives, etc.) is an
+elaboration.  I will stick to the canonical form because my aim is
+only to explain reference, not all of language.
 
 ** Reference
 
@@ -283,10 +323,11 @@ We come to the motivating question now: Suppose somebody makes a claim
 that some phrase N refers to some object O.  How do we assess the
 validity of such a claim?
 
-Or similarly: Suppose a piece of software is said to use phrase N to
-refer to some object O.  How do we write a unit test for that
-property?  Or, speaking adversarially, how would we detect a bug in the
-program that resulted from an error in reference?
+To drive home that this is a rigorous question free of metaphysics, we
+can put it in software engineering terms: Suppose a piece of software
+is said to use phrase N to refer to some object O.  How do we write a
+unit test for that property?  Or, how would we detect a bug in the
+program caused by an error in reference?
 
 The model leads to the following definition of reference:
 
@@ -329,20 +370,59 @@ another.
 ** Prior work
 
 Leibniz, Frege, Russell, Wittgenstein, Quine, Millikan, Horwich,
-Gopnik, Harman, Yablo, many others.
+Kripke, Gopnik, Harman, Yablo, many others.
 
 Much indebted to Brian Cantwell Smith.
 
+Not totally happy with Chomsky.
+
 ** Correction
-** Change
+
+Systems are typically not stable without mechanisms for correcting
+deviations from 'normal' states.
+
+When the system involves language, this means steering agents to
+repair 'incorrect' behavior.
+
+Incentives to make corrections have to come from within the system; in
+the present case, from agent behaviors, which are guided by payoff
+calculations.
+
+So it would be nice to analyze payoffs and stability in relation to
+sentence meaning: sentences that shouldn't be understood but are, or
+shouldn't be said but are, and why they might be cooperative anyhow.
+
+** Objects change
+
+In order to make use of an object hypothesis when appropriate an agent
+must be able to discriminate situations where the hypothesis is likely
+to work (the object is 'identified') and those where it is not (what
+is seen is not 'identified' as the object).
 
 The framework implies some position on the Ship of Theseus.  What is it?
 
 ** Mereology
+
+An object, and a part of that object, require different object
+hypotheses.  Explain.
+
 ** Species
+** Parsing
 ** Child development
 
 Infants learn meaning quickly and apparently with very little data.
 Is what an infant does consistent with what I've outlined?
 
 ** What does this have to do with HTTPrange-14?
+
+The infamous HTTPrange-14 question hinged on what a particular kind of
+URL (or URI) refers to, and years of bickering by many very clever
+people didn't lead to any progress on the question.
+
+https://en.wikipedia.org/wiki/HTTPRange-14
+
+Standards are most successful when they are accompanied by good unit
+tests, so in order to steer the group away from metaphysics and
+bullying, I asked the question, how would someone write a unit test to
+detect variance against _any_ requirement having to do with reference?
+There was no answer to this question.
