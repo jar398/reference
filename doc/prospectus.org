@@ -27,6 +27,15 @@ This document describes a model that is intended to suggest particular
 ideas about compositional semantics.  It should be seen as making
 approximate, not accurate, claims about the real world.
 
+Reference turns out to be the central roadblock in accounting for
+compositional language.  The crucial question in the analysis is this one:
+
+    Suppose somebody makes a claim that some phrase N refers to some
+    object O.  How do we assess the validity of such a claim?
+
+The exposition is designed to build up a possible answer to this
+question.
+
 * World
 
 By 'the world' I mean as much of reality as is needed for present
@@ -145,7 +154,7 @@ agent transduces information from its environment, together
 with its memory of what has happened before, to form additional
 memories and/or to decide how to act on its environment.
 
-Thus, sensors.
+Thus, sensors: detectors of light, sound, touch, etc.
 
 ** Virtual sensors and actuators
 
@@ -163,10 +172,10 @@ that the sensor will be in that state.
 
 Typically there is 'circuitry' to process and combine signals coming
 from sensors.  The output point of such circuitry is a manifest
-variable which, because it is derived from sensors, might be called a
-'virtual sensor'.  For simplicity I will sometimes simply use the word
-'sensor' for either a sensor or a virtual sensor.  If readers object I
-will reconsider this terminology.
+variable which, because its value/state is derived from sensor states,
+might be called a 'virtual sensor'.  For simplicity I will sometimes
+simply use the word 'sensor' for either a sensor or a virtual sensor.
+If readers object I will reconsider this terminology.
 
 The same reasoning works in reverse to yield the idea of a virtual
 actuator, whose action devolves into the action of more actual
@@ -179,16 +188,14 @@ values correspond to the position or other properties of the moving
 entity.  The virtual sensor is a complicated function of actual
 sensors.
 
-** Variables corresponding to sensors and actuators
-
 ** Payoff
 
 Agents may derive benefit or harm from events in the world, including
 their own actions.  The benefit or harm is detected through their
-senses.  I think of the payoff as a numerical quantity, intended to
-model fitness (in an evolved species), money (in a commercial
-product), points (in a game), happiness, etc.  But I do not care to
-develop this formally.
+senses, perhaps with some delay.  I think of the payoff as a numerical
+quantity, intended to model fitness (in an evolved species), money (in
+a commercial product), points (in a game), happiness, etc.  But I do
+not care to develop this formally.
 
 An agent will, other things being equal, tend to choose the highest
 payoff (or expected payoff) action, if it has a choice.
@@ -212,8 +219,7 @@ might intend to produce positive payoffs, but might 'make a mistake'
 or 'be the victim of bad information' or the interaction might not
 turn out well due to 'bad luck'.  We might still call their behavior
 cooperative.  If cooperation were the focus of this prospectus, it
-would be important to distinguish factual payoff from expected payoff,
-but I think it would be a distraction.
+would be important to distinguish factual payoff from expected payoff.
 
 * Perception
 
@@ -221,17 +227,20 @@ Common sense tells us that agents perceive objects, but this has to be
 explained in terms of the apparatus built up so far (variables,
 sensors, ...).
 
-Sensors read variables out of the world; they obtain information from
+Sensors read the state the world; they obtain information from
 the agent's environment.  The agent can detect which variables
 (thus read) go which other ones, and can form 'object hypotheses'.
+Object hypotheses help them make predictions, and good predictions
+lead to high payoffs.
 
 If two agents are together in a region, they are 'likely' to form
-similar object hypotheses when looking at the same parts of the
-region.  This is because the world has physically dictated the agents'
-peripheral perceptions.
+similar object hypotheses when 'looking at' the same parts of the
+region.  This is because the same world has physically dictated
+peripheral sensations to both agents.
 
 And these object hypotheses are similarly likely to be compatible with
-actual objects.
+actual objects.  Manifest variables in a hypothesis 'go with'
+theoretical variables derived from an object's state.
 
 * Communication
 ** Channel
@@ -272,12 +281,12 @@ everything else is an elaboration.
 
 We come to the motivating question now: Suppose somebody makes a claim
 that some phrase N refers to some object O.  How do we assess the
-truth of such a claim?
+validity of such a claim?
 
 Or similarly: Suppose a piece of software is said to use phrase N to
 refer to some object O.  How do we write a unit test for that
-property?  Or, speaking adversarially, how would we find a bug in the
-program due to an error in reference?
+property?  Or, speaking adversarially, how would we detect a bug in the
+program that resulted from an error in reference?
 
 The model leads to the following definition of reference:
 
