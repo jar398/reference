@@ -30,8 +30,10 @@ approximate, not accurate, claims about the real world.
 Reference turns out to be the central roadblock in accounting for
 compositional language.  The crucial question in the analysis is this one:
 
+    #+BEGIN_QUOTE
     Suppose somebody makes a claim that some phrase N refers to some
     object O.  How do we assess the validity of such a claim?
+    #+END_QUOTE
 
 The exposition is designed to build up a possible answer to this
 question.
