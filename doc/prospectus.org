@@ -190,6 +190,11 @@ values correspond to the position or other properties of the moving
 entity.  The virtual sensor is a complicated function of actual
 sensors.
 
+Some important kinds of sensation may be elicited by the agent
+performing an 'experiment', meaning that an actuation/sensation
+sequence results in a virtual sensor yielding information not
+available in other ways.
+
 ** Payoff
 
 Agents may derive benefit or harm from events in the world, including
@@ -229,16 +234,18 @@ Common sense tells us that agents perceive objects, but this has to be
 explained in terms of the apparatus built up so far (variables,
 sensors, ...).
 
-Sensors read the state the world; they obtain information from
-the agent's environment.  The agent can detect which variables
-(thus read) go which other ones, and can form 'object hypotheses'.
+Sensors read the state the world; they obtain information from the
+agent's environment.  The agent can detect which variables (thus read)
+go which other ones, and we can suppose that they form 'object
+hypotheses' consisting of variables that they know about that go together.
 Object hypotheses help them make predictions, and good predictions
 lead to high payoffs.
 
 If two agents are together in a region, they are 'likely' to form
 similar object hypotheses when 'looking at' the same parts of the
-region.  This is because the same world has physically dictated
-peripheral sensations to both agents.
+region, even if they have different types of sensors.  This is because
+the same world has physically dictated peripheral sensations arising
+from some 'real' object to both agents.
 
 And these object hypotheses are similarly likely to be compatible with
 actual objects.  Manifest variables in a hypothesis 'go with'
@@ -365,16 +372,20 @@ remains to be seen.
 ** Predication
 
 For compositionality, we need for both subjects and predicates to have
-meaning independent of known sentences.  Object hypotheses liberate up
-noun phrases from the sentences they inhabit and permit them to join
-with new predicates, but we must also have some theory of the
+meaning that enables their use in new sentences.  Object hypotheses
+liberate noun phrases from the sentences they inhabit and permit them
+to join with new predicates, but we must also have some theory of the
 independence of predicates.
 
 I've been so busy with reference I haven't had time to nail this
 down.  But my feeling is that it will end up being much easier than
 reference.  My working hypothesis is that a predicate means a 'procedure'
-that acts computationally on an object hypothesis to yield a truth
+that acts quasi-computationally on an object hypothesis to yield a truth
 value.
+
+(Actually an agent will have multiple 'competencies' around subjects
+and predicates, not just for assessing truth but also for bringing it
+about, as for the interpretation of imperatives.)
 
 An important case to consider is requests to make things.  "Make me an
 omelet" has a reference to an omelet that does not yet exist, but will
@@ -386,24 +397,33 @@ the request be successfully carried out.
 
 ** Assessing meaning and reference
 
-Assays of meaning (sayability) cannot be exhaustive because we would
-have to measure payoffs in a vast number of world states, while
+Assays of sentence meaning (sayability) cannot be exhaustive because
+we would have to measure payoffs in all possible world states, while
 controlling for agents' memories (experience).  This might be possible
 in a laboratory setting, but is not practical in any realistic
 setting.  We can, however, make pretty good hypotheses of meaning with
-limited data, by applying common sense assumptions and seeking the
-best hypotheses that fit available data.
+limited data, by reasoning about the world (using our own knowledge of
+it) and applying common sense assumptions to seek the best hypotheses
+of meaning that fit available data.
 
 Similarly, because there are so many predicate phrases that might
-combine with noun phrase N to form sentences, we cannot enumerate and
-test them all, and we may have to use heuristics to determine
-reference.
+combine with a given noun phrase to form sentences, we cannot
+enumerate and test them all, and we may have to use heuristics to
+determine reference.
 
 These definitions of meaning and reference may be exact, but in
 practice, meaning and reference are unknowable.  This may feel
-unsatisfactory, but remember that there is no knowledge in science at
-all, just hypotheses that fit available data better or worse than one
-another.
+unsatisfactory, but remember that there is no definite knowledge in
+science at all, only hypotheses that fit the available data better or
+worse than one another.
+
+** Unit tests
+
+[Placeholder.  If I'm right then I've established that a computer
+really is capable of genuine meaning and reference, not just "form
+filling", but only under certain circumstances.  I should be able to
+spell out the implications of the framework for 'knowledge
+representation' and robot language.]
 
 * Other topics TBD
 ** Prior work
