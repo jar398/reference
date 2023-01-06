@@ -270,6 +270,11 @@ We come to the motivating question now: Suppose somebody makes a claim
 that some phrase N refers to some object O.  How do we assess the
 truth of such a claim?
 
+Or similarly: Suppose a piece of software is said to use phrase N to
+refer to some object O.  How do we write a unit test for that
+property?  Or, speaking adversarially, how would we find a bug in the
+program due to an error in reference?
+
 The model leads to the following definition of reference:
 
     A noun phrase N refers to object O iff for every sentence S having
@@ -278,7 +283,9 @@ The model leads to the following definition of reference:
 Every part of the model rests on a foundation of variables, sentences,
 and sayability.  These are all external phenomena that can be observed
 and measured.  There is no appeal to 'mental models' or 'concepts'.
-We are led to the definition because there is no choice.
+
+We are led to this definition because the prior foundation provides no
+other choice.
 
 How well this matches the way "reference" is used in ordinary language
 remains to be seen.
