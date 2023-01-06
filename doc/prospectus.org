@@ -4,50 +4,54 @@ Demystifying compositional semantics - a prospectus
 
 This document is not intended to be a complete report but rather an
 outline or prospectus.  Its purpose is to help recruit collaborators
-and readers for future versions.
+and readers for future documents.
 
 * Introduction
 
 Compositional semantics is a system whereby a sentence composed 
-
 of parts (words, phrases) comes to have a meaning that derives from
 the meanings 
-
 of the parts.  Use of compositional semantics is the distinctive and
 most consequential way in which the human species differs from other
-living things.  It creates the situation where sentences that have
+living things.  Because of it, sentences that have
 never before been uttered can be understood by agents that have never
 heard them. My aim here is to explain how to reduce compositional
-semantics to physical phenomena. By doing so we would be able to get
-free of its apparently magical, subjective, "intentional" nature and
-subject it to scientific scrutiny and engineering.
+semantics to physical phenomena, freeing it from
+magical, subjective, or "intentional" explanations,
+subjecting it to scientific study, and enabling principled use in
+engineering.
 
 [see SEP article on Compositionality]
 
+This document describes a model that is intended to suggest particular
+ideas about compositional semantics.  It should be seen as making
+approximate, not accurate, claims about the real world.
+
 * World
 
-This document describes a model of agency and semantics.
+By 'the world' I mean as much of reality as is needed for present
+expository purposes.
 
-The world is the entire system being modeled; everything, over all
-time, that we care about for expository purposes.
-
-The world is in some state at any given time.
+At any given time the world is in some condition or arrangement or
+state.  'What the world is like' changes over time.
 
 (Yes of course the real world has relativity and so on.  This is not a
 theory of everything.)
 
 ** Variable
 
-A variable is something that varies; it takes on various values
-depending on something else.  I will use the word specifically to mean
-something that varies with time (its value is a function of time) and
-whose value is determined by the state of the world and/or present or
-future world states (i.e. a <world, time> pair).
+A variable is something that varies.  It takes on various values
+depending (on something else).  I will use the word 'variable'
+specifically to mean something that varies with time (its value is a
+function of time) and whose value is determined by the state of the
+world and/or present or future world states (i.e. a pair <all world
+states over time, time>).
 
 It is sometimes useful to speak of the probability distribution of a
 variable.  We can do that by specifying some region of the world
-(restricted in space and time) over which we can compute distributions
-in the usual way (probability theory).
+(restricted in space and time) and some theory of 'possible world
+states' representing what is possible given some knowledge state, 
+and then compute distributions in the usual way.
 
 ** Proposition
 
@@ -268,6 +272,7 @@ We are led to the definition because there is no choice.
 How well this matches the way "reference" is used in ordinary language
 remains to be seen.
 
+** Predication
 ** Assessing meaning and reference
 
 Assays of meaning (sayability) cannot be exhaustive because we would
