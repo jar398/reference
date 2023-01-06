@@ -125,7 +125,7 @@ object might be identified in a variety of ways.
 A variable is a property of an object if it belongs to the object's
 variable set K'.
 
-** Aboutness
+** Is about
 
 I want to say: a variable is about an object iff its value is
 sensitive to the properties of the object, i.e. there is some change
@@ -299,15 +299,21 @@ It many situations it would be natural to use sayability as evidence
 of truth, and non-sayability as evidence of falsity, so it is easy and
 probably not too harmful to confuse sayability and truth.
 
+Sayability may not be directly observable, but we can get close.
+  1. If an agent says S, it is probably sayable (in that context).
+  2. If an agent does not say S when otherwise it might, maybe it's
+     not sayable.
+  3. If we have a way to ask an agent whether it thinks it would be OK
+     to say S (if S is sayable), we might simply ask it.
+
 ** Sentence meaning
 
 The meaning of a sentence is a proposition; specifically, a
 proposition that is true if and only if the sentence is sayable.
 
-Presumably the sentence is sayable (or not) in some sense _because_
-the proposition is true (false), but such causation would usually be
-complex.  Fortunately we don't need to understand what the causation
-is.
+Presumably the sentence is sayable (or not) _because_ the proposition
+is true (false), but such causation would usually be complex.
+Fortunately we don't need to understand what the causation is.
 
 * Compositional communication
 ** Sentence parts
@@ -333,20 +339,51 @@ program caused by an error in reference?
 
 The model leads to the following definition of reference:
 
+    #+BEGIN_QUOTE
     A noun phrase N refers to object O iff for every sentence S having
     N as its subject phrase, S means a proposition that is about O.
+    #+END_QUOTE
+
+(See above for 'means', 'proposition', and 'about'.)
+
+This would predict, for example, that in learning 'what N refers to', an
+agent learns the sayability of a number of sentences S that lexically
+include N, and interpolates an object hypothesis (the referent of N)
+that goes with the propositions that are the meanings of the sentences
+S.
 
 Every part of the model rests on a foundation of variables, sentences,
 and sayability.  These are all external phenomena that can be observed
 and measured.  There is no appeal to 'mental models' or 'concepts'.
 
-We are led to this definition because the prior foundation provides no
+We are led to this reduction because the foundation provides no
 other choice.
 
 How well this matches the way "reference" is used in ordinary language
 remains to be seen.
 
 ** Predication
+
+For compositionality, we need for both subjects and predicates to have
+meaning independent of known sentences.  Object hypotheses liberate up
+noun phrases from the sentences they inhabit and permit them to join
+with new predicates, but we must also have some theory of the
+independence of predicates.
+
+I've been so busy with reference I haven't had time to nail this
+down.  But my feeling is that it will end up being much easier than
+reference.  My working hypothesis is that a predicate means a 'procedure'
+that acts computationally on an object hypothesis to yield a truth
+value.
+
+An important case to consider is requests to make things.  "Make me an
+omelet" has a reference to an omelet that does not yet exist, but will
+exist after the request is carried out.  Computationally, the
+predicate "Make me ---" operates not on the omelet, but on the omelet
+hypothesis.  The hypothesis in turn can be consulted to determine what
+ingredients should be used, by asking it what one would observe should
+the request be successfully carried out.
+
 ** Assessing meaning and reference
 
 Assays of meaning (sayability) cannot be exhaustive because we would
