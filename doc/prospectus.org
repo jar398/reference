@@ -47,6 +47,10 @@ function of time) and whose value is determined by the state of the
 world and/or present or future world states (i.e. a pair <all world
 states over time, time>).
 
+A "manifest" variable is one whose values are 1-1 with the states of
+some part of the world.  Non-manifest variables would occur in our
+analysis of the world but not in the world.
+
 It is sometimes useful to speak of the probability distribution of a
 variable.  We can do that by specifying some region of the world
 (restricted in space and time) and some theory of 'possible world
@@ -61,7 +65,7 @@ The state of the world at time T is 'isoontic' with the aggregate of
 all values of all propositions at time T.  That is, states can be
 distinguished by propositions.
 
-Maybe we don't need propositions ?? let's see.
+(Maybe we don't need propositions ?? let's see.)
 
 * Objects
 ** Goes with
@@ -182,13 +186,19 @@ model fitness (in an evolved species), money (in a commercial
 product), points (in a game), happiness, etc.  But I do not care to
 develop this formally.
 
+An agent will, other things being equal, tend to choose the highest
+payoff (or expected payoff) action, if it has a choice.
+
 ** Cooperation
 
 When two agents interact, the interaction is called cooperative if the
 payoff to both agents is positive.  Otherwise, it is ... not.
 
 When the payoff is positive for one but not the other, the
-interactions is exploitative.
+interaction is exploitative.  Such an interaction pattern can only be
+maintained by restricting the "victim's" choices so that the desired
+outcome has the highest payoff for them even though that payoff is
+negative.
 
 Voluntary non-cooperative interactions tend to be extinguished over
 time, since the losing agent will tend to learn to stay out of them.
@@ -198,7 +208,8 @@ might intend to produce positive payoffs, but might 'make a mistake'
 or 'be the victim of bad information' or the interaction might not
 turn out well due to 'bad luck'.  We might still call their behavior
 cooperative.  If cooperation were the focus of this prospectus, it
-would be important to handle this detail.
+would be important to distinguish factual payoff from expected payoff,
+but I think it would be a distraction.
 
 * Perception
 
@@ -302,6 +313,7 @@ Gopnik, Harman, Yablo, many others.
 
 Much indebted to Brian Cantwell Smith.
 
+** Correction
 ** Change
 
 The framework implies some position on the Ship of Theseus.  What is it?
