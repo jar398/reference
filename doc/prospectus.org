@@ -132,7 +132,7 @@ rock or hammer, but actively.  Examples: robot, human, vervet monkey,
 character in a game.
 
 'Act on the world' means exerting a force, either substantial force
-such as locomotion or breaking something, or light force such as
+such as locomotion or breaking something, or gentle force such as
 altering the voltage level on a wire, emitting light from a display,
 or generating a sound.
 
@@ -140,7 +140,7 @@ A particular way in which an agent is able to act is called an
 'actuator'.  Think of these as muscles, motors, or lights.
 
 To do anything sensible an agent also has to be able to sense its
-environment and detect forces that are applied to it.  That is, an
+environment and detect forces that are applied to the agent.  That is, an
 agent transduces information from its environment, together
 with its memory of what has happened before, to form additional
 memories and/or to decide how to act on its environment.
@@ -153,29 +153,33 @@ An agent may take in sensor information in a series of processing steps.
 
 At the agent/environment interface, there is a physical linkage
 between the state of some part of the environment and the state of
-some part of the agent.  I'll call the environment-adjacent agent part
-a 'peripheral sensor'.
-
-Typically there is 'circuitry' to process and combine signals coming
-from sensors.  The output point of such circuitry might be called a
-'virtual sensor'.  For simplicity I will simply use the word 'sensor'
-for either a sensor or a virtual sensor.  If readers object I will
-reconsider this terminology.
-
-The same reasoning works in reverse to yield the idea of a virtual
-actuator, whose action devolves into the action of more 'primitive'
-actuators.
-
-An important example of such ciruitry is tracking.  As something in
-the environment moves, or as the agent or one of its sensor-carrying
-parts (e.g. eye or ear) moves, 
-
-** Variables corresponding to sensors and actuators
+some part of the agent.  The environment-adjacent agent part
+is a sensor.
 
 For any sensor, and any state the sensor might take on, it is useful
 to consider the variable whose value at any time is the sensor's state
-at that time.  If it is in that state, that means the world is such
+at that time.  If the variable has some value, that means the world is such
 that the sensor will be in that state.
+
+Typically there is 'circuitry' to process and combine signals coming
+from sensors.  The output point of such circuitry is a manifest
+variable which, because it is derived from sensors, might be called a
+'virtual sensor'.  For simplicity I will sometimes simply use the word
+'sensor' for either a sensor or a virtual sensor.  If readers object I
+will reconsider this terminology.
+
+The same reasoning works in reverse to yield the idea of a virtual
+actuator, whose action devolves into the action of more actual
+actuators.
+
+An example of such circuitry is tracking.  As something in the
+environment moves, or as the agent or one of its sensor-carrying parts
+(e.g. eye or ear) moves, the agent may have virtual sensors whose
+values correspond to the position or other properties of the moving
+entity.  The virtual sensor is a complicated function of actual
+sensors.
+
+** Variables corresponding to sensors and actuators
 
 ** Payoff
 
