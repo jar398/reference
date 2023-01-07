@@ -41,11 +41,15 @@ question.
 
 * System
 
-By 'the system' I mean as much of reality as we care to consider for
-expository and analytic purposes.
+By 'the system' I mean as much of reality as we care to consider, here
+and now, for expository and analysis purposes; a variety of entities
+and how they relate to one another, as elaborated below.  At a certain
+point in the analysis we will have entities that interact socially in
+some physical context, so
+we are talking about what we might call a socio-physical system.
 
 At any given time the system is in some condition or arrangement or
-state.  'What the system is like' changes over time.
+state.  'What the system is like' or 'the state of the system' changes over time.
 
 (Yes of course the real world has relativity and so on.  This is not a
 theory of everything.)
@@ -118,6 +122,11 @@ Note that multiple distinct sets K, even minimal ones (no subset
 also identifies K'), could identify the same object K'.  That is, an
 object might be identified in a variety of ways.
 
+One motivation for a probabilistic approach with multiple regions is
+that it allows objects to change without immediately becoming
+unrecognizable.  (The Ship of Theseus paradox has different answers
+depending on the choice of region.)
+
 ** Property
 
 A variable is a property of an object if it belongs to the object's
@@ -136,11 +145,15 @@ propositions and objects, and the latter implies the former.
 [As usual, choice of region is important.]
 
 * Agents
-** Sensors and actuators
 
 An agent is something that acts on its environment; not passively like a
 rock or hammer, but actively.  Examples: robot, human, vervet monkey,
 character in a game.
+
+(The agent's environment is all of the rest of the system other than
+the agent.)
+
+** Sensors and actuators
 
 'Act on the environment' means exerting a force, either substantial force
 such as locomotion or breaking something, or gentle force such as
