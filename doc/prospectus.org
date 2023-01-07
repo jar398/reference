@@ -229,6 +229,8 @@ would be important to distinguish factual payoff from expected payoff.
 
 * Perception
 
+** Object hypothesis
+
 Common sense tells us that agents perceive objects, but this has to be
 explained in terms of the apparatus built up so far (variables,
 sensors, ...).
@@ -459,7 +461,7 @@ representation' and robot language.]
 Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Millikan,
 Horwich, Kripke, Gopnik, Harman, Yablo, many others.
 
-Much indebted to Brian Cantwell Smith.
+Much indebted to Brian Cantwell Smith, Henry S. Thompson, and Gerry Sussman.
 
 Not totally happy with Chomsky.
 
