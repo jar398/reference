@@ -29,7 +29,7 @@ predictions about how compositional semantics works.  It should be seen as makin
 approximate, not accurate, claims about the real world.
 
 Reference turns out to be the central roadblock in accounting for
-compositional language.  The crucial question in the analysis is this one:
+compositional language.  The motivating question in the analysis is this one:
 
     #+BEGIN_QUOTE
     Suppose somebody makes a claim that some phrase N refers to some
