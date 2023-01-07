@@ -234,21 +234,24 @@ explained in terms of the apparatus built up so far (variables,
 sensors, ...).
 
 Sensors obtain information from the agent's environment by relaying
-state across the agent/environment boundary.  The agent
-can detect which variables (thus read) go which other ones, and we can
-suppose that they form 'object hypotheses' consisting of variables
-that they know about that go together.  Object hypotheses help them
-make predictions, and good predictions lead to high payoffs.
+state across the agent/environment boundary.  The agent can detect
+which variables (thus read) 'go with' which other ones (are predictive
+of the others, similar to 'correlated'), and we can suppose that they
+form 'object hypotheses' consisting of variables that they know about
+that go together.  Object hypotheses help them make predictions, and
+better predictions lead to higher payoffs.
 
 If two agents are together in a region, they are 'likely' to form
 similar object hypotheses when 'looking at' the same parts of the
 region, even if they have different types of sensors.  This is because
-there are physically dictated peripheral sensations for both agents,
-arising from some 'real' object.
-
-And these object hypotheses are similarly likely to be compatible with
-actual objects.  Manifest variables in a hypothesis 'go with'
+forces arising from some single 'real' object (one that you and I
+would recognize as such) lead to peripheral sensations for both
+agents.  Manifest variables in an object hypothesis 'go with'
 theoretical variables derived from an object's state.
+
+However, agreement on object hypotheses is by no means guaranteed.
+Agents are always dealing with incomplete information and can in good
+faith reach different conclusions in the same situation.
 
 * Communication
 ** Channel
@@ -453,8 +456,8 @@ representation' and robot language.]
 * Other topics TBD
 ** Prior work
 
-Leibniz, Frege, Russell, Wittgenstein, Quine, Millikan, Horwich,
-Kripke, Gopnik, Harman, Yablo, many others.
+Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Millikan,
+Horwich, Kripke, Gopnik, Harman, Yablo, many others.
 
 Much indebted to Brian Cantwell Smith.
 
