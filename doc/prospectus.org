@@ -21,10 +21,11 @@ magical, subjective, or "intentional" explanations,
 subjecting it to scientific study, and enabling principled use in
 engineering.
 
-[see SEP article on Compositionality]
+[[see SEP article on 
+Compositionality][https://plato.stanford.edu/entries/compositionality/]]
 
-This document describes a model that is intended to suggest particular
-ideas about compositional semantics.  It should be seen as making
+This document describes a theory that is intended to make particular
+predictions about how compositional semantics works.  It should be seen as making
 approximate, not accurate, claims about the real world.
 
 Reference turns out to be the central roadblock in accounting for
@@ -38,13 +39,13 @@ compositional language.  The crucial question in the analysis is this one:
 The exposition is designed to build up a possible answer to this
 question.
 
-* World
+* System
 
-By 'the world' I mean as much of reality as is needed for present
-expository purposes.
+By 'the system' I mean as much of reality as we care to consider for
+expository and analytic purposes.
 
-At any given time the world is in some condition or arrangement or
-state.  'What the world is like' changes over time.
+At any given time the system is in some condition or arrangement or
+state.  'What the system is like' changes over time.
 
 (Yes of course the real world has relativity and so on.  This is not a
 theory of everything.)
@@ -55,24 +56,24 @@ A variable is something that varies.  It takes on various values
 depending (on something else).  I will use the word 'variable'
 specifically to mean something that varies with time (its value is a
 function of time) and whose value is determined by the state of the
-world and/or present or future world states (i.e. a pair <all world
+system and/or present or future system states (i.e. a pair <all system
 states over time, time>).
 
 A "manifest" variable is one whose values are 1-1 with the states of
-some part of the world.  Non-manifest variables would occur in our
-analysis of the world but not in the world.
+some part of the system.  Non-manifest variables would occur in our
+analysis of the system but not in the system itself.
 
 It is sometimes useful to speak of the probability distribution of a
-variable.  We can do that by specifying some region of the world
-(restricted in space and time) and some theory of 'possible world
-states' representing what is possible given some knowledge state, 
-and then compute distributions in the usual way.
+variable.  We can do that by specifying some region of space-time and
+some theory of 'possible region states' representing what could
+potentially be the case given some incomplete knowledge state, and
+then compute distributions in the usual way.
 
 ** Proposition
 
 A proposition is a variable whose value is a truth value (true or false).
 
-The state of the world at time T is 'isoontic' with the aggregate of
+The state of the system at time T is 'isoontic' with the aggregate of
 all values of all propositions at time T.  That is, states can be
 distinguished by propositions.
 
@@ -81,7 +82,7 @@ distinguished by propositions.
 * Objects
 ** Goes with
 
-Given variables X and Y and some region of the world, consider the
+Given variables X and Y and some region, consider the
 mutual information of X and Y, i.e. the amount of information about Y
 that we obtain by observing X (or vice versa).
 https://en.wikipedia.org/wiki/Mutual_information
@@ -103,7 +104,7 @@ containing K.
 
 Since variables that are merely functions of the variables in K cannot
 have any new information, we are really asking about regularities in
-the world: what can we predict about the world based on what we
+the system: what can we predict about the system based on what we
 already know?
 
 I'm going to call K' an 'object', and K an 'identifier' for the object.
@@ -138,11 +139,11 @@ talking about?
 * Agents
 ** Sensors and actuators
 
-An agent is something that acts on the world; not passively like a
+An agent is something that acts on its environment; not passively like a
 rock or hammer, but actively.  Examples: robot, human, vervet monkey,
 character in a game.
 
-'Act on the world' means exerting a force, either substantial force
+'Act on the environment' means exerting a force, either substantial force
 such as locomotion or breaking something, or gentle force such as
 altering the voltage level on a wire, emitting light from a display,
 or generating a sound.
@@ -169,8 +170,7 @@ is a sensor.
 
 For any sensor, and any state the sensor might take on, it is useful
 to consider the variable whose value at any time is the sensor's state
-at that time.  If the variable has some value, that means the world is such
-that the sensor will be in that state.
+at that time.
 
 Typically there is 'circuitry' to process and combine signals coming
 from sensors.  The output point of such circuitry is a manifest
@@ -197,7 +197,7 @@ available in other ways.
 
 ** Payoff
 
-Agents may derive benefit or harm from events in the world, including
+Agents may derive benefit or harm from what happens to them, including
 their own actions.  The benefit or harm is detected through their
 senses, perhaps with some delay.  I think of the payoff as a numerical
 quantity, intended to model fitness (in an evolved species), money (in
@@ -234,18 +234,18 @@ Common sense tells us that agents perceive objects, but this has to be
 explained in terms of the apparatus built up so far (variables,
 sensors, ...).
 
-Sensors read the state the world; they obtain information from the
-agent's environment.  The agent can detect which variables (thus read)
-go which other ones, and we can suppose that they form 'object
-hypotheses' consisting of variables that they know about that go together.
-Object hypotheses help them make predictions, and good predictions
-lead to high payoffs.
+Sensors obtain information from the agent's environment by relaying
+state across the agent/environment boundary.  The agent
+can detect which variables (thus read) go which other ones, and we can
+suppose that they form 'object hypotheses' consisting of variables
+that they know about that go together.  Object hypotheses help them
+make predictions, and good predictions lead to high payoffs.
 
 If two agents are together in a region, they are 'likely' to form
 similar object hypotheses when 'looking at' the same parts of the
 region, even if they have different types of sensors.  This is because
-the same world has physically dictated peripheral sensations arising
-from some 'real' object to both agents.
+there are physically dictated peripheral sensations for both agents,
+arising from some 'real' object.
 
 And these object hypotheses are similarly likely to be compatible with
 actual objects.  Manifest variables in a hypothesis 'go with'
@@ -344,7 +344,7 @@ is said to use phrase N to refer to some object O.  How do we write a
 unit test for that property?  Or, how would we detect a bug in the
 program caused by an error in reference?
 
-The model leads to the following definition of reference:
+The theory leads to the following definition of reference:
 
     #+BEGIN_QUOTE
     A noun phrase N refers to object O iff for every sentence S having
@@ -359,12 +359,12 @@ include N, and interpolates an object hypothesis (the referent of N)
 that goes with the propositions that are the meanings of the sentences
 S.
 
-Every part of the model rests on a foundation of variables, sentences,
+Every part of the theory rests on a foundation of variables, sentences,
 and sayability.  These are all external phenomena that can be observed
 and measured.  There is no appeal to 'mental models' or 'concepts'.
 
-We are led to this reduction because the foundation provides no
-other choice.
+We are led to this reduction because the theory provides no
+other way to define reference.
 
 How well this matches the way "reference" is used in ordinary language
 remains to be seen.
@@ -398,12 +398,12 @@ the request be successfully carried out.
 ** Assessing meaning and reference
 
 Assays of sentence meaning (sayability) cannot be exhaustive because
-we would have to measure payoffs in all possible world states, while
+we would have to measure payoffs in all possible situations, while
 controlling for agents' memories (experience).  This might be possible
 in a laboratory setting, but is not practical in any realistic
 setting.  We can, however, make pretty good hypotheses of meaning with
-limited data, by reasoning about the world (using our own knowledge of
-it) and applying common sense assumptions to seek the best hypotheses
+limited data, by reasoning about agents and environments (using our own knowledge of
+them) and applying common sense assumptions to seek the best hypotheses
 of meaning that fit available data.
 
 Similarly, because there are so many predicate phrases that might
@@ -422,7 +422,7 @@ worse than one another.
 [Placeholder.  If I'm right then I've established that a computer
 really is capable of genuine meaning and reference, not just "form
 filling", but only under certain circumstances.  I should be able to
-spell out the implications of the framework for 'knowledge
+spell out the implications of the theory for 'knowledge
 representation' and robot language.]
 
 * Other topics TBD
@@ -458,7 +458,7 @@ must be able to discriminate situations where the hypothesis is likely
 to work (the object is 'identified') and those where it is not (what
 is seen is not 'identified' as the object).
 
-The framework implies some position on the Ship of Theseus.  What is it?
+The theory implies some position on the Ship of Theseus.  What is it?
 
 ** Mereology
 
