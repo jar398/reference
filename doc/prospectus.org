@@ -301,7 +301,7 @@ and evolution; it does not require appeal to cognition or metaphysics.
 This is not to say truth is meaningless or arbitrary; it is just not
 helpful in this analysis to attribute it to the agents' communication.
 
-It many situations it would be natural to use sayability as evidence
+In many situations it would be natural to use sayability as evidence
 of truth, and non-sayability as evidence of falsity, so it is easy and
 probably not too harmful to confuse sayability and truth.
 
@@ -402,11 +402,11 @@ liberate noun phrases from the sentences they inhabit and permit them
 to join with new predicates, but we must also have some theory of the
 independence of predicates.
 
-I've been so busy with reference I haven't had time to nail this
-down.  But my feeling is that it will end up being much easier than
-reference.  My working hypothesis is that a predicate means a 'procedure'
-that acts quasi-computationally on an object hypothesis to yield a truth
-value.
+I've been so busy with reference I haven't had time to nail this down.
+But my feeling is that it will end up being much easier than
+reference.  My working hypothesis is that a predicate is best modeled
+as a 'procedure' that acts quasi-computationally on an object
+hypothesis to yield a truth value.
 
 (Actually an agent will have multiple 'competencies' around subjects
 and predicates, not just for assessing truth/sayability but also for bringing it
