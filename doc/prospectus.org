@@ -191,6 +191,11 @@ might be called a 'virtual sensor'.  For simplicity I will sometimes
 simply use the word 'sensor' for either a sensor or a virtual sensor.
 If readers object I will reconsider this terminology.
 
+['virtual sensor' is maybe not a good term.  think about this.]
+
+[not to head off complaints about attenuation, feedback, and so on.
+not relevant.]
+
 The same reasoning works in reverse to yield the idea of a virtual
 actuator, whose action devolves into the action of more actual
 actuators.
@@ -474,25 +479,35 @@ representation' and robot language.]
 Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Millikan,
 Horwich, Kripke, Gopnik, Harman, Yablo, many others.
 
-Much indebted to Brian Cantwell Smith, Henry S. Thompson, and Gerry Sussman.
-
 Not totally happy with Chomsky.
 
-** Correction
+** Politics
 
-Systems are typically not stable without mechanisms for correcting
-deviations from 'normal' states.
+An interaction can 'go bad' in that agent A can say something,
+expecting a positive payoff to both A and the listenint agent B, but
+one or the other payoff turns out to be zero or negative.  The overall
+outcome depends on the behavior of both agents (saying something and
+acting on it), so it is possible that the payoffs can be positive if
+one or the other agent changes its behavior.  Which of the two
+behaviors is to change is a matter of negotiation.
 
-When the system involves language, this means steering agents to
-repair 'incorrect' behavior.
+Typically neither agent really wants to change.  The consequences of
+the negotiation go beyond just this one interaction since the changing
+agent will have to decide whether to apply its change to future
+interactions with the other agent, and to its interactions with other
+agents.
 
-Incentives to make corrections have to come from within the system; in
-the present case, from agent behaviors, which are guided by payoff
-calculations.
+If the negotiation leads to A changing what it says, it might be
+described in normative terms as "A said the wrong thing to B, it
+should have said this other thing".  If it leads to B changing what it
+does, it might be described at "B misunderstood what A said, it should
+have understood it in this other way".
 
-So it would be nice to analyze payoffs and stability in relation to
-sentence meaning: sentences that shouldn't be understood but are, or
-shouldn't be said but are, and why they might be cooperative anyhow.
+A power imbalance between A and B might determine the outcome of the
+negotiation.  If A has more power than B, then it may feel it does not
+need to change what it says, and will pressure B to "capitulate".  If
+B has more power, it may feel it does not need to change what it does,
+and it will pressure A to "capitulate".
 
 ** Objects change
 
@@ -528,3 +543,9 @@ tests, so in order to steer the group away from metaphysics and
 bullying, I asked the question, how would someone write a unit test to
 detect variance against _any_ requirement having to do with reference?
 There was no answer to this question.
+** Acknowledgments
+
+Much indebted to Brian Cantwell Smith, Henry S. Thompson, and Gerry Sussman.
+
+Thanks to Christine Lemuel-Webber for comments.
+
