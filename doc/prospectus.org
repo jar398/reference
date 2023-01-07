@@ -71,13 +71,10 @@ then compute distributions in the usual way.
 
 ** Proposition
 
-A proposition is a variable whose value is a truth value (true or false).
-
-The state of the system at time T is 'isoontic' with the aggregate of
-all values of all propositions at time T.  That is, states can be
-distinguished by propositions.
-
-(Maybe we don't need propositions ?? let's see.)
+A proposition is often defined as something that is capable of being
+true or false.  In the context of this theory, we would say that a
+proposition is a variable whose value is a truth value (true or
+false).
 
 * Objects
 ** Goes with
@@ -128,13 +125,15 @@ variable set K'.
 
 ** Is about
 
-I want to say: a variable is about an object iff its value is
-sensitive to the properties of the object, i.e. there is some change
-to the truth of a set of properties that would cause the truth value
-of the variable to change.
+A variable (and in particular a proposition) is about an object iff
+its value is sensitive to the properties of the object, i.e. there is
+some change to one of the object's properties might would
+cause the value of the variable to change.
 
-But this needs to be made more precise.  E.g. what region(s) are we
-talking about?
+Aboutness is similar to propertyhood in being a relationship between
+propositions and objects, and the latter implies the former.
+
+[As usual, choice of region is important.]
 
 * Agents
 ** Sensors and actuators
@@ -270,9 +269,9 @@ expensive media; TBD].
 The state of a channel is called a 'call' or a 'sentence' or a 'message'.
 
 An 'atomic' sentence is one without independently meaningful parts
-(e.g. the call of a vervet monkey or cry of a baby).  A 'compound' or
-'composed' sentence has parts (as in a multi-word sentence uttered by
-an adult human or robot).
+(e.g. the call of a vervet monkey, cry of a baby, or an emergency word
+like "help!").  A 'compound' or 'composed' sentence is one with parts
+(as in a multi-word sentence uttered by an adult human or robot).
 
 ** Sayability
 
@@ -296,22 +295,28 @@ answer).
 
 Conventionally we would speak of a sentence being true, rather than
 being sayable, but there is no effective way to assess truth other
-than by looking whether the sentence has a 'good' vs. 'bad' effect on
-other agents.  Sayability is an idea that makes sense in terms of
-biology and evolution; it does not require appeal to cognition or
-metaphysics.  This is not to say truth is meaningless; it is just not
+than by looking at whether the sentence has a 'good' vs. 'bad'
+payoffs.  Sayability is an idea that makes sense in terms of biology
+and evolution; it does not require appeal to cognition or metaphysics.
+This is not to say truth is meaningless or arbitrary; it is just not
 helpful in this analysis to attribute it to the agents' communication.
 
 It many situations it would be natural to use sayability as evidence
 of truth, and non-sayability as evidence of falsity, so it is easy and
 probably not too harmful to confuse sayability and truth.
 
-Sayability may not be directly observable, but we can get close.
+Sayability may not be directly observable, but we can gather evidence
+about it.
   1. If an agent says S, it is probably sayable (in that context).
   2. If an agent does not say S when otherwise it might, maybe it's
      not sayable.
   3. If we have a way to ask an agent whether it thinks it would be OK
      to say S (if S is sayable), we might simply ask it.
+  4. Of course, we can try to measure payoffs directly.
+
+Whether sayability is a property of a sentence depends on whether the
+region in question contains variation in the meaning of the sentence
+(e.g. if there are multiple languages).
 
 ** Sentence meaning
 
@@ -321,6 +326,26 @@ proposition that is true if and only if the sentence is sayable.
 Presumably the sentence is sayable (or not) _because_ the proposition
 is true (false), but such causation would usually be complex.
 Fortunately we don't need to understand what the causation is.
+
+** Language
+
+A language is a set of practices used by individual agents in
+communicating with another agent.  From the perspective of this point
+in the exposition, a language would be simply a correspondence between
+a number of sentences and their meanings, but we would want to expand
+this to other practices as we look further.
+
+** Community
+
+In principle, language could be negotiated independently between each
+pair of communicators, but in practice the is little cost and enormous
+benefit for an agent to be able to use the same language with multiple
+speakers.  Doing so reduces learning time and the potential for
+mistakes.  An agent can learn language from one source and then
+practice it with another.  In a community of language users there may
+be discrepancies to deal with between different communicator pairs,
+but these can be treated either as inconsistencies to be 'corrected',
+or as exceptions that just have to be remembered.
 
 * Compositional communication
 ** Sentence parts
@@ -384,7 +409,7 @@ that acts quasi-computationally on an object hypothesis to yield a truth
 value.
 
 (Actually an agent will have multiple 'competencies' around subjects
-and predicates, not just for assessing truth but also for bringing it
+and predicates, not just for assessing truth/sayability but also for bringing it
 about, as for the interpretation of imperatives.)
 
 An important case to consider is requests to make things.  "Make me an
