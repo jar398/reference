@@ -157,19 +157,25 @@ the agent.)
 
 'Act on the environment' means exerting a force, either substantial force
 such as locomotion or breaking something, or gentle force such as
-altering the voltage level on a wire, emitting light from a display,
-or generating a sound.
+or generating a sound,
+writing on a piece of paper, 
+altering the voltage level on a wire, 
+or emitting light from a display,
 
-A particular way in which an agent is able to act is called an
-'actuator'.  Think of these as muscles, motors, or lights.
+A particular action that an agent can take is accomplished with some
+part of the agent (organ, motor, muscle, light etc); such an agent
+part is called an 'actuator'.
 
-To do anything sensible an agent also has to be able to sense its
-environment and detect forces that are applied to the agent.  That is, an
-agent transduces information from its environment, together
-with its memory of what has happened before, to form additional
-memories and/or to decide how to act on its environment.
+To be able to act differentially based on what its environment is
+like, an agent also has to be able to detect forces that are applied
+to the agent.  
 
-Thus, sensors: detectors of light, sound, touch, etc.
+An agent therefore transduces information from its environment,
+together with its memory of what has happened before, to form
+additional memories and/or to transmit information to its environment.
+
+Thus, agents have parts we'll call 'sensors': detectors of light,
+sound, touch, etc.
 
 ** Virtual sensors and actuators
 
@@ -484,12 +490,17 @@ Not totally happy with Chomsky.
 ** Politics
 
 An interaction can 'go bad' in that agent A can say something,
-expecting a positive payoff to both A and the listenint agent B, but
-one or the other payoff turns out to be zero or negative.  The overall
-outcome depends on the behavior of both agents (saying something and
-acting on it), so it is possible that the payoffs can be positive if
-one or the other agent changes its behavior.  Which of the two
-behaviors is to change is a matter of negotiation.
+expecting a positive payoff to both A and the listening agent B, but
+one or the other payoff turns out to be zero or negative.  The 
+payoffs depend on the behavior of both agents ('saying the right thing' and
+'doing the right thing'), so it is possible that the payoffs can be positive if
+either A or B changes its behavior.  There may be a choice to be made
+between A changing or B changing, if either change will lead to
+positive payoffs.  In this situation there can be a negotiation to
+determine which one changes.
+
+In some cases negotiation is impossible because feedback
+is impossible or rejected, but suppose that it is possible.
 
 Typically neither agent really wants to change.  The consequences of
 the negotiation go beyond just this one interaction since the changing
@@ -500,14 +511,15 @@ agents.
 If the negotiation leads to A changing what it says, it might be
 described in normative terms as "A said the wrong thing to B, it
 should have said this other thing".  If it leads to B changing what it
-does, it might be described at "B misunderstood what A said, it should
+does, it might be described as "B misunderstood what A said, it should
 have understood it in this other way".
 
 A power imbalance between A and B might determine the outcome of the
 negotiation.  If A has more power than B, then it may feel it does not
-need to change what it says, and will pressure B to "capitulate".  If
-B has more power, it may feel it does not need to change what it does,
-and it will pressure A to "capitulate".
+need to change what it says, and will pressure B to "capitulate" by
+changing its behavior.  If B has more power, it may feel it does not
+need to change what it does, and it will pressure A to "capitulate" by
+changing what it says.
 
 ** Objects change
 
