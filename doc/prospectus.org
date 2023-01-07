@@ -1,4 +1,4 @@
-Demystifying compositional semantics - a prospectus
+#+TITLE Demystifying compositional semantics - a prospectus
 
 * Forward
 
@@ -21,8 +21,7 @@ magical, subjective, or "intentional" explanations,
 subjecting it to scientific study, and enabling principled use in
 engineering.
 
-[[see SEP article on 
-Compositionality][https://plato.stanford.edu/entries/compositionality/]]
+(see SEP article on Compositionality: https://plato.stanford.edu/entries/compositionality/)
 
 This document describes a theory that is intended to make particular
 predictions about how compositional semantics works.  It should be seen as making
