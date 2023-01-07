@@ -28,15 +28,18 @@ predictions about how compositional semantics works.  It should be seen as makin
 approximate, not accurate, claims about the real world.
 
 Reference turns out to be the central roadblock in accounting for
-compositional language.  The motivating question in the analysis is this one:
+compositional language.  If we knew what reference was, we could
+explain the mechanics of compositional language.  The main motivating
+question for the theory is the nature of reference, made operational
+by the following question:
 
     #+BEGIN_QUOTE
     Suppose somebody makes a claim that some phrase N refers to some
     object O.  How do we assess the validity of such a claim?
     #+END_QUOTE
 
-The exposition is designed to build up a possible answer to this
-question.
+However, the theory goes beyond reference, shedding light on a variety
+of puzzles around language.
 
 * System
 
@@ -147,7 +150,7 @@ propositions and objects, and the latter implies the former.
 
 An agent is something that acts on its environment; not passively like a
 rock or hammer, but actively.  Examples: robot, human, vervet monkey,
-character in a game.
+character in a video game.
 
 (The agent's environment is all of the rest of the system other than
 the agent.)
@@ -519,6 +522,18 @@ need to change what it says, and will pressure B to "capitulate" by
 changing its behavior.  If B has more power, it may feel it does not
 need to change what it does, and it will pressure A to "capitulate" by
 changing what it says.
+
+** Cheating
+
+Suppose A says something and B acts in response.  If A receives a
+positive payoff but B receives a negative payoff (i.e. penalty), we
+might say A 'lied' to B or A 'tricked' B or A said something that
+wasn't 'true'.  (It's also possible that A made a mistake.)
+
+If A receives a negative payoff and B a positive payoff, we could say
+B 'betrayed' A by performing an action not favorable to A, when A
+trusted B to perform the favorable action it expected.
+(But it's also possible that B made a mistake).
 
 ** Objects change
 
