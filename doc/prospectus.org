@@ -124,6 +124,22 @@ Note that multiple distinct sets K, even minimal ones (no subset
 also identifies K'), could identify the same object K'.  That is, an
 object might be identified in a variety of ways.
 
+When we calculate mutual information there are several kinds of
+variation over which we can sample, depending on the region.
+  1. All or most of the variables change at once; this could be due to
+     an object coming into the field of the agent's sensors, or leaving.
+  2. When an object is replaced by a similar but
+     distinguishable object.
+  3. A change to an object that doesn't
+     reflect replacement with a different object, such as when a cuttlefish changes
+     its color, or a computer monitor displays a different picture.
+  4. Noise, as when a sensor is itself probabilistic.
+
+[how does the agent 'know' which case applies?]
+
+[TBD: mutual information when we're dealing with multiple variables is
+mathematics I don't understand - this part needs to be tightened up]
+
 One motivation for a probabilistic approach with multiple regions is
 that it allows objects to change without immediately becoming
 unrecognizable.  (The Ship of Theseus paradox has different answers
@@ -254,7 +270,6 @@ cooperative.  If cooperation were the focus of this prospectus, it
 would be important to distinguish factual payoff from expected payoff.
 
 * Perception
-
 ** Object hypothesis
 
 Common sense tells us that agents perceive objects, but this has to be
@@ -317,12 +332,15 @@ payoff to B.  A may receive an indirect positive payoff via
 reciprocation, inclusive fitness, amortization, or in some other way.
 
 A positive payoff to A can result from B doing something on A's
-behalf.  B is acting, in effect, as an extension of A's actuators.  We
+behalf.  B is acting, in effect, as a new actuator for A.  We
 call these imperative sentences.  They have an expected positive
 payoff to A, and an indirect payoff to B.
 
 A question is an imperative sentence that requests information (an
 answer).
+
+Sayability is to be determined on amortized or average payoffs;
+it is not meant to refer to an individual interaction.
 
 Conventionally we would speak of a sentence being true, rather than
 being sayable, but there is no effective way to assess truth other
@@ -342,12 +360,13 @@ about it.
   2. If an agent does not say S when otherwise it might, maybe it's
      not sayable.
   3. If we have a way to ask an agent whether it thinks it would be OK
-     to say S (if S is sayable), we might simply ask it.
+     for it to say S (i.e. whether S is sayable), we might simply ask it.
   4. Of course, we can try to measure payoffs directly.
 
 Whether sayability is a property of a sentence depends on whether the
 region in question contains variation in the meaning of the sentence
-(e.g. if there are multiple languages).
+(e.g. if there are multiple languages, or if meaning varies depending
+on which speakers/listeners are involved).
 
 ** Sentence meaning
 
@@ -569,7 +588,7 @@ tests, so in order to steer the group away from metaphysics and
 bullying, I asked the question, how would someone write a unit test to
 detect variance against _any_ requirement having to do with reference?
 There was no answer to this question.
-** Acknowledgments
+* Acknowledgments
 
 Much indebted to Brian Cantwell Smith, Henry S. Thompson, and Gerry Sussman.
 
