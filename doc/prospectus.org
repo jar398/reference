@@ -100,6 +100,16 @@ out later.  For now just assume some threshold I guess.
 
 ** Object
 
+[I need to rewrite this for approachability.  I need an example where
+we have a set of variables that are sensors or detectors aimed at some
+part of the world, and various objects come into that part of the world
+and are sensed, and by 'identifying' one we come to know properties
+that are otherwise expensive to detect.
+
+And maybe the entities described here - constrained variable sets -
+should not be called 'objects' even if they are isoontic with
+objects.  But then what they should be called?]
+
 From a set of variables K = {X1, X2, ... Xn} we can ask, what other
 variables can be predicted from the variables in K (over some region)?
 The collection of all such variables would be a larger set K'
@@ -110,32 +120,35 @@ have any new information, we are really asking about regularities in
 the system: what can we predict about the system based on what we
 already know?
 
-I'm going to call K' an 'object', and K an 'identifier' for the object.
+I hypothesize that what you and I would identify as an object in
+the system corresponds to a set K' of variables with mutual
+information; and vice versa, if we have a maximal set K', then there
+is a corresponding object.  That is, maximal mutual dependent variable
+sets are equivalent to objects.
 
-(Yes I'm playing fast and loose with the cardinality of K'.  There is
+[Yes I'm playing fast and loose with the cardinality of K'.  There is
 also some question about the properties of these maximal collections
-K': are they unique etc.  Future work.)
+K': are they unique etc.  Future work.]
 
-If K' doesn't add 'much' to K, then we don't have much of an object.
-It would be nice to have a way to exclude random collections of
-variables as identifying sets.
+If K' doesn't add 'much' to K, i.e. if K doesn't predict much, then we
+don't have much of an object.  It would be nice to have a way to
+exclude random collections of variables as identifying sets.
 
 Note that multiple distinct sets K, even minimal ones (no subset
 also identifies K'), could identify the same object K'.  That is, an
 object might be identified in a variety of ways.
 
-When we calculate mutual information there are several kinds of
-variation over which we can sample, depending on the region.
+When we assess mutual information there are several kinds of
+variation over which we might sample:
   1. All or most of the variables change at once; this could be due to
-     an object coming into the field of the agent's sensors, or leaving.
+     the variables coming under control of some common object (it
+     'moves into view').
   2. When an object is replaced by a similar but
-     distinguishable object.
+     distinguishable cause.
   3. A change to an object that doesn't
      reflect replacement with a different object, such as when a cuttlefish changes
      its color, or a computer monitor displays a different picture.
   4. Noise, as when a sensor is itself probabilistic.
-
-[how does the agent 'know' which case applies?]
 
 [TBD: mutual information when we're dealing with multiple variables is
 mathematics I don't understand - this part needs to be tightened up]
