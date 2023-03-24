@@ -1,4 +1,4 @@
-Demystifying compositional semantics - a prospectus
+#+TITLE: Demystifying compositional semantics - a prospectus
 
 * Forward
 
@@ -41,7 +41,7 @@ by the following question:
 However, the theory goes beyond reference, shedding light on a variety
 of puzzles around language.
 
-* System
+* Ontology
 
 By 'the system' I mean as much of reality as we care to consider, here
 and now, for expository and analysis purposes; a variety of entities
@@ -82,7 +82,6 @@ true or false.  In the context of this theory, we would say that a
 proposition is a variable whose value is a truth value (true or
 false).
 
-* Objects
 ** Goes with
 
 Given variables X and Y and some region, consider the
@@ -98,7 +97,13 @@ Just how high the mutual information needs to be in the following is
 unclear to me and is probably context dependent.  I will figure this
 out later.  For now just assume some threshold I guess.
 
-** Object
+** Haecceity / unknowns
+We like to track things because the thing carries something of value:
+either information or assets (e.g. food).  Or, we might want to track
+speculatively, based on expectation that tracking will pay off.
+** Continuity
+Write me
+** Recovering objects from propositions
 
 [I need to rewrite this for approachability.  I need an example where
 we have a set of variables that are sensors or detectors aimed at some
@@ -158,12 +163,16 @@ that it allows objects to change without immediately becoming
 unrecognizable.  (The Ship of Theseus paradox has different answers
 depending on the choice of region.)
 
-** Property
+** Decomposing proposition into predicate + subject
+Write me.  I define 'predicate' and 'subject' here are 
+semantic, not syntactic.  (The syntactic terms would ne
+'predicate phrase' and 'subject phrase'.)
+*** Property
 
 A variable is a property of an object if it belongs to the object's
-variable set K'.
+variable set K'.  (?)
 
-** Is about
+** Aboutness
 
 A variable (and in particular a proposition) is about an object iff
 its value is sensitive to the properties of the object, i.e. there is
@@ -175,6 +184,8 @@ propositions and objects, and the latter implies the former.
 
 [As usual, choice of region is important.]
 
+** Gestalt and mereology
+Maybe this goes in some other section.
 * Agents
 
 An agent is something that acts on its environment; not passively like a
@@ -282,33 +293,7 @@ turn out well due to 'bad luck'.  We might still call their behavior
 cooperative.  If cooperation were the focus of this prospectus, it
 would be important to distinguish factual payoff from expected payoff.
 
-* Perception
-** Object hypothesis
-
-Common sense tells us that agents perceive objects, but this has to be
-explained in terms of the apparatus built up so far (variables,
-sensors, ...).
-
-Sensors obtain information from the agent's environment by relaying
-state across the agent/environment boundary.  The agent can detect
-which variables (thus read) 'go with' which other ones (are predictive
-of the others, similar to 'correlated'), and we can suppose that they
-form 'object hypotheses' consisting of variables that they know about
-that go together.  Object hypotheses help them make predictions, and
-better predictions lead to higher payoffs.
-
-If two agents are together in a region, they are 'likely' to form
-similar object hypotheses when 'looking at' the same parts of the
-region, even if they have different types of sensors.  This is because
-forces arising from some single 'real' object (one that you and I
-would recognize as such) lead to peripheral sensations for both
-agents.  Manifest variables in an object hypothesis 'go with'
-theoretical variables derived from an object's state.
-
-However, agreement on object hypotheses is by no means guaranteed.
-Agents are always dealing with incomplete information and can in good
-faith reach different conclusions in the same situation.
-
+** Dualities
 * Communication
 ** Channel
 
@@ -390,27 +375,8 @@ Presumably the sentence is sayable (or not) _because_ the proposition
 is true (false), but such causation would usually be complex.
 Fortunately we don't need to understand what the causation is.
 
-** Language
-
-A language is a set of practices used by individual agents in
-communicating with another agent.  From the perspective of this point
-in the exposition, a language would be simply a correspondence between
-a number of sentences and their meanings, but we would want to expand
-this to other practices as we look further.
-
-** Community
-
-In principle, language could be negotiated independently between each
-pair of communicators, but in practice the is little cost and enormous
-benefit for an agent to be able to use the same language with multiple
-speakers.  Doing so reduces learning time and the potential for
-mistakes.  An agent can learn language from one source and then
-practice it with another.  In a community of language users there may
-be discrepancies to deal with between different communicator pairs,
-but these can be treated either as inconsistencies to be 'corrected',
-or as exceptions that just have to be remembered.
-
-* Compositional communication
+** Example: vervet monkey (signaling systems)
+* Composition
 ** Sentence parts
 
 Sentences in natural language come in a variety of compositional
@@ -483,6 +449,33 @@ hypothesis.  The hypothesis in turn can be consulted to determine what
 ingredients should be used, by asking it what one would observe should
 the request be successfully carried out.
 
+** Object hypothesis
+
+Common sense tells us that agents perceive objects, but this has to be
+explained in terms of the apparatus built up so far (variables,
+sensors, ...).
+
+Sensors obtain information from the agent's environment by relaying
+state across the agent/environment boundary.  The agent can detect
+which variables (thus read) 'go with' which other ones (are predictive
+of the others, similar to 'correlated'), and we can suppose that they
+form 'object hypotheses' consisting of variables that they know about
+that go together.  Object hypotheses help them make predictions, and
+better predictions lead to higher payoffs.
+
+If two agents are together in a region, they are 'likely' to form
+similar object hypotheses when 'looking at' the same parts of the
+region, even if they have different types of sensors.  This is because
+forces arising from some single 'real' object (one that you and I
+would recognize as such) lead to peripheral sensations for both
+agents.  Manifest variables in an object hypothesis 'go with'
+theoretical variables derived from an object's state.
+
+However, agreement on object hypotheses is by no means guaranteed.
+Agents are always dealing with incomplete information and can in good
+faith reach different conclusions in the same situation.
+
+* Exploration
 ** Assessing meaning and reference
 
 Assays of sentence meaning (sayability) cannot be exhaustive because
@@ -505,6 +498,8 @@ unsatisfactory, but remember that there is no definite knowledge in
 science at all, only hypotheses that fit the available data better or
 worse than one another.
 
+** Cross-agent sameness judgments
+Write me.
 ** Unit tests
 
 [Placeholder.  If I'm right then I've established that a computer
@@ -521,7 +516,48 @@ Horwich, Kripke, Gopnik, Harman, Yablo, many others.
 
 Not totally happy with Chomsky.
 
-** Politics
+** Drifting
+** Mereology
+
+An object, and a part of that object, require different object
+hypotheses.  Explain.
+
+** Parsing (parts-ing)
+what did I mean by this?
+** Species (generic individuals)
+** Cheating
+
+Suppose A says something and B acts in response.  If A receives a
+positive payoff but B receives a negative payoff (i.e. penalty), we
+might say A 'lied' to B or A 'tricked' B or A said something that
+wasn't 'true'.  (It's also possible that A made a mistake.)
+
+If A receives a negative payoff and B a positive payoff, we could say
+B 'betrayed' A by performing an action not favorable to A, when A
+trusted B to perform the favorable action it expected.
+(But it's also possible that B made a mistake).
+
+** Community
+
+In principle, language could be negotiated independently between each
+pair of communicators, but in practice the is little cost and enormous
+benefit for an agent to be able to use the same language with multiple
+speakers.  Doing so reduces learning time and the potential for
+mistakes.  An agent can learn language from one source and then
+practice it with another.  In a community of language users there may
+be discrepancies to deal with between different communicator pairs,
+but these can be treated either as inconsistencies to be 'corrected',
+or as exceptions that just have to be remembered.
+
+** Language
+
+A language is a set of practices used by individual agents in
+communicating with another agent.  From the perspective of this point
+in the exposition, a language would be simply a correspondence between
+a number of sentences and their meanings, but we would want to expand
+this to other practices as we look further.
+
+** Power PO
 
 An interaction can 'go bad' in that agent A can say something,
 expecting a positive payoff to both A and the listening agent B, but
@@ -555,18 +591,6 @@ changing its behavior.  If B has more power, it may feel it does not
 need to change what it does, and it will pressure A to "capitulate" by
 changing what it says.
 
-** Cheating
-
-Suppose A says something and B acts in response.  If A receives a
-positive payoff but B receives a negative payoff (i.e. penalty), we
-might say A 'lied' to B or A 'tricked' B or A said something that
-wasn't 'true'.  (It's also possible that A made a mistake.)
-
-If A receives a negative payoff and B a positive payoff, we could say
-B 'betrayed' A by performing an action not favorable to A, when A
-trusted B to perform the favorable action it expected.
-(But it's also possible that B made a mistake).
-
 ** Objects change
 
 In order to make use of an object hypothesis when appropriate an agent
@@ -576,13 +600,6 @@ is seen is not 'identified' as the object).
 
 The theory implies some position on the Ship of Theseus.  What is it?
 
-** Mereology
-
-An object, and a part of that object, require different object
-hypotheses.  Explain.
-
-** Species
-** Parsing
 ** Child development
 
 Infants learn meaning quickly and apparently with very little data.
