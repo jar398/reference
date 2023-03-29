@@ -1,4 +1,4 @@
-Demystifying compositional semantics - a prospectus
+#+TITLE: Demystifying compositional semantics - a prospectus
 
 * Forward
 
@@ -41,7 +41,8 @@ by the following question:
 However, the theory goes beyond reference, shedding light on a variety
 of puzzles around language.
 
-* World
+* Ontology
+>>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
 
 By 'the world' I mean as much of reality or imagined reality as we care to consider, here
 and now, for expository and analysis purposes, as elaborated below.
@@ -110,10 +111,10 @@ don't.
 If we were to observe these three variables - nectar sugar content,
 color, and shape - were unconstrained, we might just say that it is because they are all part
 
-* Objects
+** Goes with
 
 Unlike in many conventional treatments (e.g. Aristotle, Leibniz, BFO),
-objects are conspicuously absent from the present model of the world.
+objects are absent from this model of the world so far.
 This is because of the intent to understand what an agent is up
 against in living and communicating in the world, and agents do not
 have a direct way to detect objects.  Objects cannot be sensed or
@@ -129,12 +130,94 @@ P(x).  Here we cannot start with an object.  Rather we have:
   3. only then can we say that Q1 = P1(x) i.e. the proposition Q1 says
      that x has property P1, or is 'about' x.
 
-** Property
+If the mutual information is high, i.e. if knowing X is nearly as good
+as knowing Y, I'll say that X "goes with" Y or that X and Y "go
+together".
+
+Just how high the mutual information needs to be in the following is
+unclear to me and is probably context dependent.  I will figure this
+out later.  For now just assume some threshold I guess.
+
+** Haecceity / unknowns
+We like to track things because the thing carries something of value:
+either information or assets (e.g. food).  Or, we might want to track
+speculatively, based on expectation that tracking will pay off.
+** Continuity
+Write me
+** Recovering objects from propositions
+
+[I need to rewrite this for approachability.  I need an example where
+we have a set of variables that are sensors or detectors aimed at some
+part of the world, and various objects come into that part of the world
+and are sensed, and by 'identifying' one we come to know properties
+that are otherwise expensive to detect.
+
+And maybe the entities described here - constrained variable sets -
+should not be called 'objects' even if they are isoontic with
+objects.  But then what they should be called?]
+
+From a set of variables K = {X1, X2, ... Xn} we can ask, what other
+variables can be predicted from the variables in K (over some region)?
+The collection of all such variables would be a larger set K'
+containing K.
+
+Since variables that are merely functions of the variables in K cannot
+have any new information, we are really asking about regularities in
+the system: what can we predict about the system based on what we
+already know?
+
+I hypothesize that what you and I would identify as an object in
+the system corresponds to a set K' of variables with mutual
+information; and vice versa, if we have a maximal set K', then there
+is a corresponding object.  That is, maximal mutual dependent variable
+sets are equivalent to objects.
+
+[Yes I'm playing fast and loose with the cardinality of K'.  There is
+also some question about the properties of these maximal collections
+K': are they unique etc.  Future work.]
+
+If K' doesn't add 'much' to K, i.e. if K doesn't predict much, then we
+don't have much of an object.  It would be nice to have a way to
+exclude random collections of variables as identifying sets.
+
+Note that multiple distinct sets K, even minimal ones (no subset
+also identifies K'), could identify the same object K'.  That is, an
+object might be identified in a variety of ways.
+
+When we assess mutual information there are several kinds of
+variation over which we might sample:
+  1. All or most of the variables change at once; this could be due to
+     the variables coming under control of some common object (it
+     'moves into view').
+  2. When an object is replaced by a similar but
+     distinguishable cause.
+  3. A change to an object that doesn't
+     reflect replacement with a different object, such as when a cuttlefish changes
+     its color, or a computer monitor displays a different picture.
+  4. Noise, as when a sensor is itself probabilistic.
+
+[TBD: mutual information when we're dealing with multiple variables is
+mathematics I don't understand - this part needs to be tightened up]
+
+One motivation for a probabilistic approach with multiple regions is
+that it allows objects to change without immediately becoming
+unrecognizable.  (The Ship of Theseus paradox has different answers
+depending on the choice of region.)
+>>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
+
+** Decomposing proposition into predicate + subject
+Write me.  I define 'predicate' and 'subject' here are 
+semantic, not syntactic.  (The syntactic terms would ne
+'predicate phrase' and 'subject phrase'.)
+*** Property
 
 A variable is a property of an object if has a dependence on the
 object's other properties.  (or something like that.)
+????
+A variable is a property of an object if it belongs to the object's
+variable set K'.  (?)
 
-** Is about
+** Aboutness
 
 A variable (and in particular a proposition) is about an object iff
 its value is sensitive to the properties of the object, i.e. there is
@@ -146,6 +229,8 @@ propositions and objects, and the latter implies the former.
 
 [As usual, choice of region is important.]
 
+** Gestalt and mereology
+Maybe this goes in some other section.
 * Agents
 
 An agent is something that acts on its environment; not passively like a
@@ -253,33 +338,7 @@ turn out well due to 'bad luck'.  We might still call their behavior
 cooperative.  If cooperation were the focus of this prospectus, it
 would be important to distinguish factual payoff from expected payoff.
 
-* Perception
-** Object hypothesis
-
-Common sense tells us that agents perceive objects, but this has to be
-explained in terms of the apparatus built up so far (variables,
-sensors, ...).
-
-Sensors obtain information from the agent's environment by relaying
-state across the agent/environment boundary.  The agent can detect
-which variables (thus read) 'go with' which other ones (are predictive
-of the others, similar to 'correlated'), and we can suppose that they
-form 'object hypotheses' consisting of variables that they know about
-that go together.  Object hypotheses help them make predictions, and
-better predictions lead to higher payoffs.
-
-If two agents are together in a region, they are 'likely' to form
-similar object hypotheses when 'looking at' the same parts of the
-region, even if they have different types of sensors.  This is because
-forces arising from some single 'real' object (one that you and I
-would recognize as such) lead to peripheral sensations for both
-agents.  Manifest variables in an object hypothesis 'go with'
-theoretical variables derived from an object's state.
-
-However, agreement on object hypotheses is by no means guaranteed.
-Agents are always dealing with incomplete information and can in good
-faith reach different conclusions in the same situation.
-
+** Dualities
 * Communication
 ** Channel
 
@@ -361,27 +420,8 @@ Presumably the sentence is sayable (or not) _because_ the proposition
 is true (false), but such causation would usually be complex.
 Fortunately we don't need to understand what the causation is.
 
-** Language
-
-A language is a set of practices used by individual agents in
-communicating with another agent.  From the perspective of this point
-in the exposition, a language would be simply a correspondence between
-a number of sentences and their meanings, but we would want to expand
-this to other practices as we look further.
-
-** Community
-
-In principle, language could be negotiated independently between each
-pair of communicators, but in practice the is little cost and enormous
-benefit for an agent to be able to use the same language with multiple
-speakers.  Doing so reduces learning time and the potential for
-mistakes.  An agent can learn language from one source and then
-practice it with another.  In a community of language users there may
-be discrepancies to deal with between different communicator pairs,
-but these can be treated either as inconsistencies to be 'corrected',
-or as exceptions that just have to be remembered.
-
-* Compositional communication
+** Example: vervet monkey (signaling systems)
+* Composition
 ** Sentence parts
 
 Sentences in natural language come in a variety of compositional
@@ -454,6 +494,33 @@ hypothesis.  The hypothesis in turn can be consulted to determine what
 ingredients should be used, by asking it what one would observe should
 the request be successfully carried out.
 
+** Object hypothesis
+
+Common sense tells us that agents perceive objects, but this has to be
+explained in terms of the apparatus built up so far (variables,
+sensors, ...).
+
+Sensors obtain information from the agent's environment by relaying
+state across the agent/environment boundary.  The agent can detect
+which variables (thus read) 'go with' which other ones (are predictive
+of the others, similar to 'correlated'), and we can suppose that they
+form 'object hypotheses' consisting of variables that they know about
+that go together.  Object hypotheses help them make predictions, and
+better predictions lead to higher payoffs.
+
+If two agents are together in a region, they are 'likely' to form
+similar object hypotheses when 'looking at' the same parts of the
+region, even if they have different types of sensors.  This is because
+forces arising from some single 'real' object (one that you and I
+would recognize as such) lead to peripheral sensations for both
+agents.  Manifest variables in an object hypothesis 'go with'
+theoretical variables derived from an object's state.
+
+However, agreement on object hypotheses is by no means guaranteed.
+Agents are always dealing with incomplete information and can in good
+faith reach different conclusions in the same situation.
+
+* Exploration
 ** Assessing meaning and reference
 
 Assays of sentence meaning (sayability) cannot be exhaustive because
@@ -476,6 +543,8 @@ unsatisfactory, but remember that there is no definite knowledge in
 science at all, only hypotheses that fit the available data better or
 worse than one another.
 
+** Cross-agent sameness judgments
+Write me.
 ** Unit tests
 
 [Placeholder.  If I'm right then I've established that a computer
@@ -492,7 +561,48 @@ Horwich, Kripke, Gopnik, Harman, Yablo, many others.
 
 Not totally happy with Chomsky.
 
-** Politics
+** Drifting
+** Mereology
+
+An object, and a part of that object, require different object
+hypotheses.  Explain.
+
+** Parsing (parts-ing)
+what did I mean by this?
+** Species (generic individuals)
+** Cheating
+
+Suppose A says something and B acts in response.  If A receives a
+positive payoff but B receives a negative payoff (i.e. penalty), we
+might say A 'lied' to B or A 'tricked' B or A said something that
+wasn't 'true'.  (It's also possible that A made a mistake.)
+
+If A receives a negative payoff and B a positive payoff, we could say
+B 'betrayed' A by performing an action not favorable to A, when A
+trusted B to perform the favorable action it expected.
+(But it's also possible that B made a mistake).
+
+** Community
+
+In principle, language could be negotiated independently between each
+pair of communicators, but in practice the is little cost and enormous
+benefit for an agent to be able to use the same language with multiple
+speakers.  Doing so reduces learning time and the potential for
+mistakes.  An agent can learn language from one source and then
+practice it with another.  In a community of language users there may
+be discrepancies to deal with between different communicator pairs,
+but these can be treated either as inconsistencies to be 'corrected',
+or as exceptions that just have to be remembered.
+
+** Language
+
+A language is a set of practices used by individual agents in
+communicating with another agent.  From the perspective of this point
+in the exposition, a language would be simply a correspondence between
+a number of sentences and their meanings, but we would want to expand
+this to other practices as we look further.
+
+** Power PO
 
 An interaction can 'go bad' in that agent A can say something,
 expecting a positive payoff to both A and the listening agent B, but
@@ -526,18 +636,6 @@ changing its behavior.  If B has more power, it may feel it does not
 need to change what it does, and it will pressure A to "capitulate" by
 changing what it says.
 
-** Cheating
-
-Suppose A says something and B acts in response.  If A receives a
-positive payoff but B receives a negative payoff (i.e. penalty), we
-might say A 'lied' to B or A 'tricked' B or A said something that
-wasn't 'true'.  (It's also possible that A made a mistake.)
-
-If A receives a negative payoff and B a positive payoff, we could say
-B 'betrayed' A by performing an action not favorable to A, when A
-trusted B to perform the favorable action it expected.
-(But it's also possible that B made a mistake).
-
 ** Objects change
 
 In order to make use of an object hypothesis when appropriate an agent
@@ -547,13 +645,6 @@ is seen is not 'identified' as the object).
 
 The theory implies some position on the Ship of Theseus.  What is it?
 
-** Mereology
-
-An object, and a part of that object, require different object
-hypotheses.  Explain.
-
-** Species
-** Parsing
 ** Child development
 
 Infants learn meaning quickly and apparently with very little data.
