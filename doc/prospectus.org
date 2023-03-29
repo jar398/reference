@@ -8,7 +8,7 @@ and readers for future documents.
 
 * Introduction
 
-Compositional semantics is a system whereby a sentence composed 
+Compositional semantics refers to a situation where a sentence composed 
 of parts (words, phrases) comes to have a meaning that derives from
 the meanings 
 of the parts.  Use of compositional semantics is the distinctive and
@@ -41,133 +41,104 @@ by the following question:
 However, the theory goes beyond reference, shedding light on a variety
 of puzzles around language.
 
-* System
+* World
 
-By 'the system' I mean as much of reality as we care to consider, here
-and now, for expository and analysis purposes; a variety of entities
-and how they relate to one another, as elaborated below.  At a certain
-point in the analysis we will have entities that interact socially in
-some physical context, so
-we are talking about what we might call a socio-physical system.
+By 'the world' I mean as much of reality or imagined reality as we care to consider, here
+and now, for expository and analysis purposes, as elaborated below.
+Since the goal is to relate meaning to empirical observation, we might
+call it a socio-physical world.
 
-At any given time the system is in some condition or arrangement or
-state.  'What the system is like' or 'the state of the system' changes over time.
+The world can be in various states (or conditions or arrangements).
+'What the world is like' or 'the state of the world' differs
+depending on the state.
 
 (Yes of course the real world has relativity and so on.  This is not a
 theory of everything.)
 
 ** Variable
 
-A variable is something that varies.  It takes on various values
-depending (on something else).  I will use the word 'variable'
-specifically to mean something that varies with time (its value is a
-function of time) and whose value is determined by the state of the
-system and/or present or future system states (i.e. a pair <all system
-states over time, time>).
+Define a variable to be a function from world states to values.  A
+value could be a truth value (true/false), number, letter, or anything
+similarly simple and abstract.
 
-A "manifest" variable is one whose values are 1-1 with the states of
-some part of the system.  Non-manifest variables would occur in our
-analysis of the system but not in the system itself.
+A proposition is a variable whose value can be true or false.
 
-It is sometimes useful to speak of the probability distribution of a
-variable.  We can do that by specifying some region of space-time and
-some theory of 'possible region states' representing what could
-potentially be the case given some incomplete knowledge state, and
-then compute distributions in the usual way.
+Simple examples:
+* the brightness of a star as seen from near a particular
+  other star
+* the reflectance of part of some surface, such as a patch of ground
+* the mass of a piece of fruit
+* the number of zebras on earth
+* the sugar content of the nectar in a flower
 
-** Proposition
+A variable might be sensitive to what any number of world states
+are like.  For example, if world states are organized by time, a
+variable might be sensitive to past or future states.  
 
-A proposition is often defined as something that is capable of being
-true or false.  In the context of this theory, we would say that a
-proposition is a variable whose value is a truth value (true or
-false).
+(This is not the same as saying a variable is just a function of all
+world states.  It is a function of a particular state, with visibility
+to other states.)
 
-* Objects
-** Goes with
+In reasoning with partial information about the world, it is sometimes
+useful to speak of the probability distribution of a variable.  We
+might do that by specifying some slice, subset, or region of the world
+and a theory of what is possible in that slice given what we know or
+don't know about the slice.  We can then calculate probability
+distributions over these 'possible states'.  (I take uncertainty as a
+lack of knowledge on something's or somebody's part, not as a
+phenomenon something inherent in the world itself.)
 
-Given variables X and Y and some region, consider the
-mutual information of X and Y, i.e. the amount of information about Y
-that we obtain by observing X (or vice versa).
+** Dependence
+
+If it is difficult or dangerous to read a variable, say x, directly,
+it can be helpful to identify a second variable y that can provide information
+about x.  Two variables in this configuration - one providing
+information about the other - are said to be dependent, constrained, or correlated,
+or to have mutual information.
 https://en.wikipedia.org/wiki/Mutual_information
 
-If the mutual information is high, i.e. if knowing X is nearly as good
-as knowing Y, I'll say that X "goes with" Y or that X and Y "go
-together".
+For example, it might take time and energy to determine the sugar
+content of nectar hidden deep inside a flower, but other variables,
+such as the flower's color or shape, can act as a less 'expensive'
+proxy for the desired information.
 
-Just how high the mutual information needs to be in the following is
-unclear to me and is probably context dependent.  I will figure this
-out later.  For now just assume some threshold I guess.
+We can come to know constraints such as these through 'experience',
+i.e. by watching how they change through time.  If they change
+together we have a constraint, and if they change independently they
+don't.
 
-** Object
+If we were to observe these three variables - nectar sugar content,
+color, and shape - were unconstrained, we might just say that it is because they are all part
 
-[I need to rewrite this for approachability.  I need an example where
-we have a set of variables that are sensors or detectors aimed at some
-part of the world, and various objects come into that part of the world
-and are sensed, and by 'identifying' one we come to know properties
-that are otherwise expensive to detect.
+* Objects
 
-And maybe the entities described here - constrained variable sets -
-should not be called 'objects' even if they are isoontic with
-objects.  But then what they should be called?]
+Unlike in many conventional treatments (e.g. Aristotle, Leibniz, BFO),
+objects are conspicuously absent from the present model of the world.
+This is because of the intent to understand what an agent is up
+against in living and communicating in the world, and agents do not
+have a direct way to detect objects.  Objects cannot be sensed or
+measured; they have to be imputed from experience.
 
-From a set of variables K = {X1, X2, ... Xn} we can ask, what other
-variables can be predicted from the variables in K (over some region)?
-The collection of all such variables would be a larger set K'
-containing K.
+In the conventional view, we say there is an object x, and it has
+properties P1(x), P2(x), and so on, and therefore it has property
+P(x).  Here we cannot start with an object.  Rather we have:
 
-Since variables that are merely functions of the variables in K cannot
-have any new information, we are really asking about regularities in
-the system: what can we predict about the system based on what we
-already know?
-
-I hypothesize that what you and I would identify as an object in
-the system corresponds to a set K' of variables with mutual
-information; and vice versa, if we have a maximal set K', then there
-is a corresponding object.  That is, maximal mutual dependent variable
-sets are equivalent to objects.
-
-[Yes I'm playing fast and loose with the cardinality of K'.  There is
-also some question about the properties of these maximal collections
-K': are they unique etc.  Future work.]
-
-If K' doesn't add 'much' to K, i.e. if K doesn't predict much, then we
-don't have much of an object.  It would be nice to have a way to
-exclude random collections of variables as identifying sets.
-
-Note that multiple distinct sets K, even minimal ones (no subset
-also identifies K'), could identify the same object K'.  That is, an
-object might be identified in a variety of ways.
-
-When we assess mutual information there are several kinds of
-variation over which we might sample:
-  1. All or most of the variables change at once; this could be due to
-     the variables coming under control of some common object (it
-     'moves into view').
-  2. When an object is replaced by a similar but
-     distinguishable cause.
-  3. A change to an object that doesn't
-     reflect replacement with a different object, such as when a cuttlefish changes
-     its color, or a computer monitor displays a different picture.
-  4. Noise, as when a sensor is itself probabilistic.
-
-[TBD: mutual information when we're dealing with multiple variables is
-mathematics I don't understand - this part needs to be tightened up]
-
-One motivation for a probabilistic approach with multiple regions is
-that it allows objects to change without immediately becoming
-unrecognizable.  (The Ship of Theseus paradox has different answers
-depending on the choice of region.)
+  1. first, a set of observations Q1, Q2, and so on,
+  2. then we connect them to one another; the pattern of connection we
+     identify as an 'object' x,
+  3. only then can we say that Q1 = P1(x) i.e. the proposition Q1 says
+     that x has property P1, or is 'about' x.
 
 ** Property
 
-A variable is a property of an object if it belongs to the object's
-variable set K'.
+A variable is a property of an object if has a dependence on the
+object's other properties.  (or something like that.)
 
 ** Is about
 
 A variable (and in particular a proposition) is about an object iff
 its value is sensitive to the properties of the object, i.e. there is
-some change to one of the object's properties might would
+some change to one of the object's properties that could
 cause the value of the variable to change.
 
 Aboutness is similar to propertyhood in being a relationship between
@@ -181,7 +152,7 @@ An agent is something that acts on its environment; not passively like a
 rock or hammer, but actively.  Examples: robot, human, vervet monkey,
 character in a video game.
 
-(The agent's environment is all of the rest of the system other than
+(The agent's environment is all of the rest of the world other than
 the agent.)
 
 ** Sensors and actuators
