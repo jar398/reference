@@ -6,26 +6,25 @@ This document is not intended to be a complete report but rather an
 outline or prospectus.  Its purpose is to help recruit collaborators
 and readers for future documents.
 
+To criticize or copy-edit something so unfinished and imperfect would
+not be difficult.  The kind of help I'm looking for has more to do
+with overall organization and gaps.
+
 * Introduction
 
-Compositional semantics refers to a situation where a sentence composed 
-of parts (words, phrases) comes to have a meaning that derives from
-the meanings 
-of the parts.  Use of compositional semantics is the distinctive and
-most consequential way in which the human species differs from other
-living things.  Because of it, sentences that have
-never before been uttered can be understood by agents that have never
-heard them. My aim here is to explain how to reduce compositional
-semantics to physical phenomena, freeing it from
-magical, subjective, or "intentional" explanations,
-subjecting it to scientific study, and enabling principled use in
-engineering.
+Compositional semantics refers to a situation where a sentence
+composed of parts (words, phrases) comes to have a meaning that
+derives from the meanings of the parts.  Use of compositional
+semantics is the distinctive and most consequential way in which the
+human species differs from other living things.  Because of it,
+sentences that have never before been uttered can be understood by
+agents that have never heard them. My aim here is to explain how to
+reduce compositional semantics to physical phenomena, freeing it from
+magical, subjective, or "intentional" explanations, subjecting it to
+scientific study, and enabling principled use in engineering.
 
-(see SEP article on Compositionality: https://plato.stanford.edu/entries/compositionality/)
-
-This document describes a theory that is intended to make particular
-predictions about how compositional semantics works.  It should be seen as making
-approximate, not accurate, claims about the real world.
+(It might be helpful to review the SEP article on compositionality:
+https://plato.stanford.edu/entries/compositionality/)
 
 Reference turns out to be the central roadblock in accounting for
 compositional language.  If we knew what reference was, we could
@@ -35,83 +34,114 @@ by the following question:
 
     #+BEGIN_QUOTE
     Suppose somebody makes a claim that some phrase N refers to some
-    object O.  How do we assess the validity of such a claim?
+    object O.  How do we assess the validity of such a claim?? What
+    evidence do we bring to bear?
     #+END_QUOTE
 
-However, the theory goes beyond reference, shedding light on a variety
-of puzzles around language.
+However, the theory goes beyond reference, and to the extent it
+succeeds, it should shed light on a variety of puzzles around
+language.
+
+The main presentation is in four parts.  The first three parts set the
+stage for addressing the question of compositionality, and the fourth
+does so.  Part 1 presents an 'ontology', which can be taken to be
+either the description of a contrived world, or an abstraction in a
+certain direction of the real world.  Part 2 talks about agents, which
+are entities that 'act' on the world and interact with one another.
+Part 3 is about communication between agents.
 
 * Ontology
->>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
 
-By 'the world' I mean as much of reality or imagined reality as we care to consider, here
-and now, for expository and analysis purposes, as elaborated below.
-Since the goal is to relate meaning to empirical observation, we might
-call it a socio-physical world.
+** World
+
+By 'the world' I mean as much of reality or imagined reality as we
+care to consider, here and now, for expository purposes.  Since the
+goal is to relate meaning to empirical observation, we might call it a
+socio-physical world.
 
 The world can be in various states (or conditions or arrangements).
-'What the world is like' or 'the state of the world' differs
-depending on the state.
+That is, 'what the world is like' or 'the state of the world' varies.
 
-(Yes of course the real world has relativity and so on.  This is not a
-theory of everything.)
+** Possible world states
+
+I may make a distinction sometimes between 'potential' world states
+and those that are 'actual'.  Actual world states are those that the
+world actually takes on, while potential world states are those that
+can't be ruled out, given what we know (or have assumed) about the
+world.
+
+I don't want to make too much of this, since this is not a treatise on
+probability theory or model logic.
 
 ** Variable
 
-Define a variable to be a function from world states to values.  A
-value could be a truth value (true/false), number, letter, or anything
-similarly simple and abstract.
+A variable is a function from world states to values; sensitive
+perhaps not only to one particular state, but perhaps also to some or
+all previous or future states.  (Instead of present, past, and future
+time we could consider any other independent variable.  Since this
+doesn't matter very much I'll take the independent variable to be
+time.)  The value of a variable could be a truth value (true/false),
+number, letter, or anything similarly simple and abstract; a 'scalar'
+if you will.
 
-A proposition is a variable whose value can be true or false.
+Simple not very formal examples:
+    * the brightness of a star as seen from near a particular
+      other star (if the world has stars)
+    * the reflectance of part of some surface, such as a patch of ground
+    * the mass of a piece of fruit
+    * the number of zebras on earth
+    * for a time t, the number of zebras that have lived up until time t
+    * the sugar content of the nectar in a flower
 
-Simple examples:
-* the brightness of a star as seen from near a particular
-  other star
-* the reflectance of part of some surface, such as a patch of ground
-* the mass of a piece of fruit
-* the number of zebras on earth
-* the sugar content of the nectar in a flower
+A proposition is a variable whose value can only be true or false for
+any given time; that is, a variable bit.
 
-A variable might be sensitive to what any number of world states
-are like.  For example, if world states are organized by time, a
-variable might be sensitive to past or future states.  
+** Encoding variables using multiple propositions
 
-(This is not the same as saying a variable is just a function of all
-world states.  It is a function of a particular state, with visibility
-to other states.)
+A variable that takes on a finite number of values can have its values
+encoded as a set of propositions, making propositions and finite-range
+variables 'iso-ontic' or interdefinable.  For a variable taking on
+eight values, for example, one encoding might be the usual binary
+encoding as three propositions (variable bits).  A different encoding
+that might be useful in some situations would be to encode it as eight
+propositions, one for each value, with the proviso that exactly one
+of them is true at any given time.
 
 In reasoning with partial information about the world, it is sometimes
-useful to speak of the probability distribution of a variable.  We
-might do that by specifying some slice, subset, or region of the world
-and a theory of what is possible in that slice given what we know or
-don't know about the slice.  We can then calculate probability
-distributions over these 'possible states'.  (I take uncertainty as a
-lack of knowledge on something's or somebody's part, not as a
-phenomenon something inherent in the world itself.)
+useful to speak of the probability distribution of a variable assuming
+some propositions that we think we know or that some other party
+thinks they know.  These propositions or 'prior knowledge' would be
+one way to distinguish 'possible world states' from impossible ones:
+the possible ones are those consistent with prior knowledge.
 
-** Dependence
+I use this interdefinability as justification for being able to choose
+a variable-centered framework or a proposition-centered one as is
+convenient in context.
 
-If it is difficult or dangerous to read a variable, say x, directly,
-it can be helpful to identify a second variable y that can provide information
-about x.  Two variables in this configuration - one providing
-information about the other - are said to be dependent, constrained, or correlated,
-or to have mutual information.
-https://en.wikipedia.org/wiki/Mutual_information
+** Constraints
 
-For example, it might take time and energy to determine the sugar
-content of nectar hidden deep inside a flower, but other variables,
-such as the flower's color or shape, can act as a less 'expensive'
-proxy for the desired information.
+As hinted above, in a particular world, there may be world states
+(general states) that are not possible.  This may be due to
+constraints between variables.  For example, if P and Q are
+propositions, there may be a constraint that says that exactly one of
+P and Q can be true.  Constraints can hold between collections of
+variables.  We previously saw an encoding that depended on a simple
+constraint, that exactly one of eight propositions must be true.
 
-We can come to know constraints such as these through 'experience',
-i.e. by watching how they change through time.  If they change
-together we have a constraint, and if they change independently they
-don't.
+A functional constraint is one where knowing the values of 'enough'
+variables tells you the value of some others.  E.g. is a, b, and c are
+constrained to have a sum of zero, then knowing any two tells you the
+third, i.e. the third is a function of the first two.
 
-If we were to observe these three variables - nectar sugar content,
-color, and shape - were unconstrained, we might just say that it is because they are all part
+Similar ideas are for variables to be dependent or correlated, or to
+have mutual information
+[[https://en.wikipedia.org/wiki/Mutual_information]], the latter because
+knowing some of the variables give you information about the others
+(or at least about their distribution, in a probabilistic setting).
 
 ** Goes with
+
+FLUSH / REWORK without mentioning objects
 
 Unlike in many conventional treatments (e.g. Aristotle, Leibniz, BFO),
 objects are absent from this model of the world so far.
@@ -137,6 +167,32 @@ together".
 Just how high the mutual information needs to be in the following is
 unclear to me and is probably context dependent.  I will figure this
 out later.  For now just assume some threshold I guess.
+
+** Proxies
+
+If it is difficult or dangerous to read a variable, say x, directly,
+it can be helpful to identify a second variable y that can provide information
+about x.
+
+For example, it might take time and energy to determine the sugar
+content of nectar hidden deep inside a flower, but other variables,
+such as the flower's color or shape, can act as a less 'expensive'
+proxy for the desired information.
+
+We can come to know constraints such as these through 'experience',
+i.e. by watching how they change through time.  If they change
+together we have a constraint, and if they change independently they
+don't.
+
+If we were to observe these three variables - nectar sugar content,
+color, and shape - were unconstrained, we might just say that it is
+because they are all part [trails off]
+
+** Leibniz
+
+[digression into Leibniz - if you something's properties, you know
+whether the something is a given object - or, an object is determined
+by its properties]
 
 ** Haecceity / unknowns
 We like to track things because the thing carries something of value:
@@ -231,6 +287,7 @@ propositions and objects, and the latter implies the former.
 
 ** Gestalt and mereology
 Maybe this goes in some other section.
+
 * Agents
 
 An agent is something that acts on its environment; not passively like a
@@ -520,7 +577,7 @@ However, agreement on object hypotheses is by no means guaranteed.
 Agents are always dealing with incomplete information and can in good
 faith reach different conclusions in the same situation.
 
-* Exploration
+* Stepping back
 ** Assessing meaning and reference
 
 Assays of sentence meaning (sayability) cannot be exhaustive because
@@ -557,7 +614,7 @@ representation' and robot language.]
 ** Prior work
 
 Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Millikan,
-Horwich, Kripke, Gopnik, Harman, Yablo, many others.
+Horwich, Kripke, Harman, Gopnik, Yablo, many others.
 
 Not totally happy with Chomsky.
 
@@ -665,7 +722,12 @@ detect variance against _any_ requirement having to do with reference?
 There was no answer to this question.
 * Acknowledgments
 
-Much indebted to Brian Cantwell Smith, Henry S. Thompson, and Gerry Sussman.
+Much indebted to Brian Cantwell Smith, Henry S. Thompson, Alan Renear,
+and Gerry Sussman for ongoing moral support.
 
-Thanks to Christine Lemuel-Webber for comments.
+Pat Hayes advised the W3C TAG on matters of reference and in doing so
+taught me a lot about model theory and was a major inspiration for
+this work.
+
+Thanks to Christine Lemuel-Webber and Alan Ruttenberg for comments.
 
