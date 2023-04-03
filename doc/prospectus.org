@@ -7,8 +7,10 @@ outline or prospectus.  Its purpose is to help recruit collaborators
 and readers for future documents.
 
 To criticize or copy-edit something so unfinished and imperfect would
-not be difficult.  The kind of help I'm looking for has more to do
-with overall organization and gaps.
+not be difficult.  I'm not sure it's a good use of time given that
+whole sections may be dropped or rewritten.  The kind of help I'm
+looking for is advice on what is being said and on the overalll
+structure of the exposition.
 
 * Introduction
 
@@ -33,22 +35,21 @@ question for the theory is the nature of reference, made operational
 by the following question:
 
     #+BEGIN_QUOTE
-    Suppose somebody makes a claim that some phrase N refers to some
-    object O.  How do we assess the validity of such a claim?? What
-    evidence do we bring to bear?
+    Suppose somebody claims that a phrase N refers to some
+    entity O.  How do we assess the validity of such a claim?  What
+    evidence do we bring to bear one way or the other?
     #+END_QUOTE
 
 However, the theory goes beyond reference, and to the extent it
 succeeds, it should shed light on a variety of puzzles around
 language.
 
-The main presentation is in four parts.  The first three parts set the
-stage for addressing the question of compositionality, and the fourth
-does so.  Part 1 presents an 'ontology', which can be taken to be
-either the description of a contrived world, or an abstraction in a
-certain direction of the real world.  Part 2 talks about agents, which
-are entities that 'act' on the world and interact with one another.
-Part 3 is about communication between agents.
+The core of the presentation is in four parts.  Part 1 presents an
+'ontology', which can be taken to be either the description of a
+contrived world, or an abstraction of the real world.  Part 2 talks
+about agents, which are entities that 'act' in and on the world and
+interact with one another.  Part 3 is about communication between
+agents.  Finally, part 4 gets to the main topic of compositionality.
 
 * Ontology
 
@@ -75,13 +76,14 @@ probability theory or model logic.
 
 ** Variable
 
-A variable is a function from world states to values; sensitive
-perhaps not only to one particular state, but perhaps also to some or
-all previous or future states.  (Instead of present, past, and future
-time we could consider any other independent variable.  Since this
-doesn't matter very much I'll take the independent variable to be
-time.)  The value of a variable could be a truth value (true/false),
-number, letter, or anything similarly simple and abstract; a 'scalar'
+A variable is a function from world states to values (also called
+states or variable states) The function is sensitive perhaps not only
+to the given particular state, but perhaps also to some or all states
+previous or future to it.  (Instead of present, past, and future time
+we could consider any other independent variable.  Since the choice of
+independent variable doesn't matter I'll take it to be time.)  The
+value of a variable could be a truth value (true/false), number,
+letter, number, or anything similarly simple and abstract; a 'scalar'
 if you will.
 
 Simple not very formal examples:
@@ -118,6 +120,40 @@ I use this interdefinability as justification for being able to choose
 a variable-centered framework or a proposition-centered one as is
 convenient in context.
 
+** Variables and places
+
+There are many ways a world might be structured, but I find it helpful
+to think about structuring by geometry because geometry carries such a
+rich set of intuitions and formal methods.
+
+Suppose the world has some kind of geometry, meaning there are
+multiple places in it.  Furthermore suppose that there is stuff in the
+world, meaning that places have one or more associated quantities or
+'properties' (mass, density, temperature, color, texture, and so on).
+We can take each property of each location to be a variable.  E.g. if
+the location is a part of a wall, and someone paints the wall, the
+color of the wall has varied, i.e. the value of the variable that is
+the wall color has changed.
+
+(I like to use colors in examples because there are several of them,
+they are called by short familiar words, and they are easy to
+visualize and to draw.  Henry reminds me that color is a very complex
+phenomenon resulting from the interplay of illumination, reflectance,
+background, context, perceptual machinery, and so on, but that is not
+the kind of color I am talking about.  I'm referring to the kind you
+find on or in ordinary children's blocks and paints in good lighting
+conditions.)
+
+The world state in this view would consist of all properties of all
+locations.
+
+Many things vary, not just properties of places over time.  The value
+of a variable at time t-1, given a time t, also varies, as do sums,
+products, and integrals of variables, etc.  So when I say 'variable' I
+mean quite a broad class - anything that varies according to time.
+(And perhaps even according to the choice of world, if we start to
+think about alternative worlds, but let's not go there.)
+
 ** Constraints
 
 As hinted above, in a particular world, there may be world states
@@ -133,13 +169,103 @@ variables tells you the value of some others.  E.g. is a, b, and c are
 constrained to have a sum of zero, then knowing any two tells you the
 third, i.e. the third is a function of the first two.
 
-Similar ideas are for variables to be dependent or correlated, or to
-have mutual information
-[[https://en.wikipedia.org/wiki/Mutual_information]], the latter because
-knowing some of the variables give you information about the others
-(or at least about their distribution, in a probabilistic setting).
+The idea of constraint it related to those of dependence and
+correlation.  The statistical notion of mutual information
+[[https://en.wikipedia.org/wiki/Mutual_information]] also describes a
+situation where knowing information about some variables gives you information
+about others (or at least about their distribution, in a
+probabilistic setting).
 
-** Goes with
+A variable can be involved in multiple constraints, resulting in a
+constraint network.
+
+Another way of speaking about constraints is to say that the value of
+one variable is constrained by the values of others.  In a set of N
+mutually constrained variables, each of them is constrained by the
+set consisting of N-1 remaining variables.
+
+When I speak of constraints I am speaking of properties of the world
+that might be confirmed or refuted by data spanning changes to variables.
+Constraints might or might not be purposefully created.
+
+** Clusters
+
+Constraints combine when they share variables.  We call the resulting
+systems constraint networks.  While everything affects everything else
+to some degree, we can usually identify more or less discrete networks
+consisting of constrainted parts, which can also be described as
+clusters of mutually constrained variables.
+
+These clusters tend to be called "things" or "objects" or "entities".
+Their variables reflect the condition of their parts, and their
+constraints reflect the arrangement and function of the parts.  
+
+I'll use "entity" as it is the most neutral and abstract of these
+words.
+
+The point of all this analysis is to say that variables (including
+propositions) are the correct starting point for ontology, and
+entities are secondary since they emerge from ensembles of variables
+and their constraints.  You can take this as a claim about our world,
+or about the contrived world I am presenting, or as a philosophical
+position.
+
+** Symmetry
+
+The geometry of a space is characterized by its symmetries, which in
+this case would be transformations that take a set of locations (and
+their properties) to a new set of locations, preserving important
+aspects of their geometry.  For example, symmetries that conserve
+distances, angles, and (in a three dimensional space) chirality, would
+be combinations of rotations and translations.  Distances and angles
+are constraints, so it is natural to ask of any constraint whether it
+is preserved by a transformation.  By saying that "the same
+constraint" applies across a transformation, we are saying that a
+constraint might apply not just to a particular ensemble of variables,
+but rather to an ensemble of variables that is itself variable -
+different variables at different times or in different places.  In
+particular, a geometric symmetry takes us from one set of locations to
+a new set of locations.
+
+One can define variables that 'track' symmetries.  Suppose we have a
+symmetry between a variable $x$ before time $t$ (or before some kind
+of event) and a variable $y$ after $t$.  We can define a new variable
+$z$ that coincides with $x$ before $t$ and with $y$ after $t$.  $z$
+"tracks" $x$ to $y$ across the symmetry.
+
+This extends to tracking of constraints.  The correct choice of
+symmetry will 'preserve' constraints.  We might say that the
+constrained variables appear to have 'moved'.
+
+We may choose to analyze the world, or part of it, in a new coordinate
+system based on a transformation that tracks variables and constraints
+that we care about.
+
+* Further material on entities
+
+SKIP THIS SECTION AND GO ON TO AGENTS.
+
+There's a lot of fun material here but it is probably not all
+necessary to the narrative.
+
+Need to figure out a natural ordering of these topics, if I do decide
+to include them.
+
+Probably I should just flush the entire section.
+
+** Continuity and tracking
+
+Write me. Why do I want to introduce continuity right at this point,
+as opposed to doing constraints and clusters first? -- continuity is
+deeply tied to clusters, and should come in later.
+
+The cups and ball game, or shell game, or some 'simpler' variant
+
+#+BEGIN_EXAMPLE
+  Some ASCII art perhaps.
+#+END_EXAMPLE
+
+** Goes with - objects - needs work
 
 FLUSH / REWORK without mentioning objects
 
@@ -164,10 +290,6 @@ If the mutual information is high, i.e. if knowing X is nearly as good
 as knowing Y, I'll say that X "goes with" Y or that X and Y "go
 together".
 
-Just how high the mutual information needs to be in the following is
-unclear to me and is probably context dependent.  I will figure this
-out later.  For now just assume some threshold I guess.
-
 ** Proxies
 
 If it is difficult or dangerous to read a variable, say x, directly,
@@ -188,18 +310,10 @@ If we were to observe these three variables - nectar sugar content,
 color, and shape - were unconstrained, we might just say that it is
 because they are all part [trails off]
 
-** Leibniz
-
-[digression into Leibniz - if you something's properties, you know
-whether the something is a given object - or, an object is determined
-by its properties]
-
 ** Haecceity / unknowns
 We like to track things because the thing carries something of value:
 either information or assets (e.g. food).  Or, we might want to track
 speculatively, based on expectation that tracking will pay off.
-** Continuity
-Write me
 ** Recovering objects from propositions
 
 [I need to rewrite this for approachability.  I need an example where
@@ -261,6 +375,13 @@ unrecognizable.  (The Ship of Theseus paradox has different answers
 depending on the choice of region.)
 >>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
 
+** Leibniz
+
+[digression into Leibniz - if you something's properties, you know
+whether the something is a given object - or, an object is determined
+by its properties]
+
+** Choosing (orienting to) a subject...
 ** Decomposing proposition into predicate + subject
 Write me.  I define 'predicate' and 'subject' here are 
 semantic, not syntactic.  (The syntactic terms would ne
@@ -288,11 +409,19 @@ propositions and objects, and the latter implies the former.
 ** Gestalt and mereology
 Maybe this goes in some other section.
 
+** Coordinate systems and effective variables
+
+Suppose that the world has some kind of space with a geometry.
+Consider a variable defined by a coordinate system on the space
+together with operations that can be performed in reference to the
+coordinate system.
+
 * Agents
 
-An agent is something that acts on its environment; not passively like a
-rock or hammer, but actively.  Examples: robot, human, vervet monkey,
-character in a video game.
+An agent is an information processing system of some sort: something
+that acts on its environment; not passively like a rock or hammer, but
+actively by sensing its environment and acting on it.  Examples:
+robot, human, vervet monkey, character in a video game.
 
 (The agent's environment is all of the rest of the world other than
 the agent.)
@@ -577,7 +706,8 @@ However, agreement on object hypotheses is by no means guaranteed.
 Agents are always dealing with incomplete information and can in good
 faith reach different conclusions in the same situation.
 
-* Stepping back
+
+* What do we do now
 ** Assessing meaning and reference
 
 Assays of sentence meaning (sayability) cannot be exhaustive because
@@ -611,14 +741,8 @@ spell out the implications of the theory for 'knowledge
 representation' and robot language.]
 
 * Other topics TBD
-** Prior work
-
-Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Millikan,
-Horwich, Kripke, Harman, Gopnik, Yablo, many others.
-
-Not totally happy with Chomsky.
-
 ** Drifting
+write me
 ** Mereology
 
 An object, and a part of that object, require different object
@@ -720,6 +844,13 @@ tests, so in order to steer the group away from metaphysics and
 bullying, I asked the question, how would someone write a unit test to
 detect variance against _any_ requirement having to do with reference?
 There was no answer to this question.
+* Prior work
+
+Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Chomsky,
+Kripke, Horwich, Harman, Millikan, Gopnik, Yablo, many others.
+
+'shooting fish in a barrel'
+
 * Acknowledgments
 
 Much indebted to Brian Cantwell Smith, Henry S. Thompson, Alan Renear,
