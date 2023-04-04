@@ -55,9 +55,7 @@ about agents, which are entities that 'act' in and on the world and
 interact with one another.  Part 3 is about communication between
 agents.  Finally, part 4 gets to the main topic of compositionality.
 
-* Ontology
-
-** World
+* World
 
 By 'the world' I mean as much of reality or imagined reality as we
 care to consider, here and now, for expository purposes.  Since the
@@ -248,19 +246,19 @@ that we care about.
 * Agents
 
 An agent is an information processing system of some sort: something
-that acts on its environment.  Not passively like a rock or hammer,
-but actively by sensing its environment and acting on it in a way that
-is senstive to what it sensed.  Examples: robot, human, vervet monkey,
-character in a video game.
+that acts in response to, and on, its environment. The mechanism is
+not passive like a rock or hammer, but active in that the environment
+is sensed and actions are chosen in a way that is senstive in a
+complex way to what is sensed.
 
-(The agent's environment is all of the rest of the world other than
-the agent.)
+Examples: robot, human, vervet monkey, character in a video game.
+
 
 ** Sensors and actuators
 
 'Act on the environment' means exerting a force, either substantial force
 such as locomotion or breaking something, or gentle force such as
-or generating a sound,
+generating a sound,
 writing on a piece of paper, 
 altering the voltage level on a wire, 
 or emitting light from a display,
@@ -278,7 +276,14 @@ together with its memory of what has happened before, to form
 additional memories and/or to transmit information to its environment.
 
 Thus, agents have parts we'll call 'sensors': detectors of light,
-sound, touch, etc.
+sound, touch, etc.  A sensor has the function of establishing a
+constraint between a variable outside the agent and one inside the
+agent.
+
+Actuators are the same but in the opposite causal and temporarl
+direction.  An actuator estabishes a constraint between a variable
+inside the agent (what it "wants to do") and one outside the agent
+(some change that is effected).
 
 ** Virtual sensors and actuators
 
@@ -335,26 +340,35 @@ payoff (or expected payoff) action, if it has a choice.
 
 ** Cooperation
 
-When two agents interact, the interaction is called cooperative if the
-payoff to both agents is positive.  Otherwise, it is ... not.
+When two agents interact, the interaction is cooperative if and only
+if the expected payoff (under justifiable expectations) to both agents
+is positive.  I take this as an axiomatic definition of cooperation.
 
-When the payoff is positive for one but not the other, the
-interaction is exploitative.  Such an interaction pattern can only be
-maintained by restricting the "victim's" choices so that the desired
-outcome has the highest payoff for them even though that payoff is
-negative.
+When the payoff is positive for one agent but not the other, the
+interaction is exploitative.  We tend to call this "cheating".
 
 Voluntary non-cooperative interactions tend to be extinguished over
-time, since the losing agent will tend to learn to stay out of them.
+time, since the exploited agent will tend to learn to stay out of them.
+Such an interaction pattern cannot be maintained indefinitely without
+coercion.
 
 Ordinarily we would judge cooperation by intent; that is, an agent
 might intend to produce positive payoffs, but might 'make a mistake'
 or 'be the victim of bad information' or the interaction might not
 turn out well due to 'bad luck'.  We might still call their behavior
-cooperative.  If cooperation were the focus of this prospectus, it
-would be important to distinguish factual payoff from expected payoff.
+cooperative due to /expected/ payoffs over time.  If cooperation were
+the focus of this prospectus, it would be important to distinguish
+short-tem payoff from expected payoff.
 
 ** Dualities
+
+Agent / environnment
+
+Sensor / actuator
+
+Input / output
+
+etc.
 
 * Communication
 ** Channel
@@ -366,13 +380,14 @@ can sense the state.
 
 B is thereby connected indirectly to A's actuators, and A is connected
 indirectly to B's sensors.  The forces involved are typically gentle.
-Communication does not result in any direct physical payoff or loss to
-the participants [notwithstanding the 'handicap principle' and
-expensive media; TBD].
+Communication, being gentle, does not result in any direct physical
+payoff or loss to the participants [notwithstanding the 'handicap
+principle' and expensive media; TBD].
 
 ** Sentence
 
-The state of a channel is called a 'call' or a 'sentence' or a 'message'.
+The state of a channel is called a 'call' (as in, bird or monkey call)
+or a 'sentence' or a 'message'.
 
 An 'atomic' sentence is one without independently meaningful parts
 (e.g. the call of a vervet monkey, cry of a baby, or an emergency word
@@ -381,34 +396,40 @@ like "help!").  A 'compound' or 'composed' sentence is one with parts
 
 ** Sayability
 
-Suppose A is communicating with B over a channel.
-A sentence is sayable in a context if, when A says it, the
-outcome is a cooperative (positive payoff) interaction between A and B.
+Suppose A is communicating with B over a channel.  A sentence is
+sayable in a context if, when A says it, the outcome is a cooperative
+(positive payoff) interaction between A and B.
+
+It is useful to call out special configurations of sayability:
 
 A positive payoff to B can result if the sentence 'provides useful
-information'.  A is acting, in effect, as an extension of B's sensors.
-Such sentences are called declarative.  They have an expected positive
-payoff to B.  A may receive an indirect positive payoff via
-reciprocation, inclusive fitness, amortization, or in some other way.
+information'.  A might act, in effect, as an extension of B's sensors,
+lending its sensors to B.  Such sentences are called /declarative/;
+they primarily have an expected positive payoff to B, who is in a
+position to make use of the information.  (A may receive an indirect
+positive payoff via reciprocation, inclusive fitness, amortization, or
+in some other way.)
 
 A positive payoff to A can result from B doing something on A's
-behalf.  B is acting, in effect, as a new actuator for A.  We
-call these imperative sentences.  They have an expected positive
-payoff to A, and an indirect payoff to B.
+behalf.  B might act, in effect, as a new actuator for A.  We call
+these /imperative/ sentences.  They have an expected positive payoff to
+A as a result of the action, and an indirect payoff to B.
 
-A question is an imperative sentence that requests information (an
-answer).
+A /question/ is a kind of imperative sentence, one that requests
+information (an answer).
 
-Sayability is to be determined on amortized or average payoffs;
-it is not meant to refer to an individual interaction.
+Again, as in any cooperative enterprise, sayability is to be
+determined based on amortized or average payoffs; it may refer to an
+individual interaction, but in general payoff is expected on average.
 
 Conventionally we would speak of a sentence being true, rather than
-being sayable, but there is no effective way to assess truth other
-than by looking at whether the sentence has a 'good' vs. 'bad'
-payoffs.  Sayability is an idea that makes sense in terms of biology
-and evolution; it does not require appeal to cognition or metaphysics.
-This is not to say truth is meaningless or arbitrary; it is just not
-helpful in this analysis to attribute it to the agents' communication.
+being sayable, but there is no effective, empirical way to assess
+truth other than by looking at whether the sentence has a 'good'
+vs. 'bad' payoffs.  Sayability is an idea that makes sense in terms of
+biology and evolution; it does not require appeal to cognition or
+metaphysics.  This is not to say truth is meaningless or arbitrary; it
+is just not helpful in this analysis to attribute it to the agents'
+communication.
 
 In many situations it would be natural to use sayability as evidence
 of truth, and non-sayability as evidence of falsity, so it is easy and
@@ -563,127 +584,63 @@ worse than one another.
 
 ** Cross-agent sameness judgments
 Write me.
+
+Suppose agents A and B both use a phrase $\Phi$.  How do they know, or
+determine, whether they mean the same thing by $\Phi$ ?
+
+And especially, if they are trying to make these determinations by
+putting $\Phi$ into sentences, how do they know that the phrase
+$\Pi$ denoting the predicate means the same to both?
+
+Sounds like a system of simultaneous equations to me.
+
 ** Unit tests
 
 [Placeholder.  If I'm right then I've established that a computer
 really is capable of genuine meaning and reference, not just "form
-filling", but only under certain circumstances.  I should be able to
-spell out the implications of the theory for 'knowledge
-representation' and robot language.]
-
-* Other topics TBD
-** Drifting
-write me
-** Mereology
-
-An object, and a part of that object, require different object
-hypotheses.  Explain.
-
-** Parsing (parts-ing)
-what did I mean by this?
-** Species (generic individuals)
-** Cheating
-
-Suppose A says something and B acts in response.  If A receives a
-positive payoff but B receives a negative payoff (i.e. penalty), we
-might say A 'lied' to B or A 'tricked' B or A said something that
-wasn't 'true'.  (It's also possible that A made a mistake.)
-
-If A receives a negative payoff and B a positive payoff, we could say
-B 'betrayed' A by performing an action not favorable to A, when A
-trusted B to perform the favorable action it expected.
-(But it's also possible that B made a mistake).
-
-** Community
-
-In principle, language could be negotiated independently between each
-pair of communicators, but in practice the is little cost and enormous
-benefit for an agent to be able to use the same language with multiple
-speakers.  Doing so reduces learning time and the potential for
-mistakes.  An agent can learn language from one source and then
-practice it with another.  In a community of language users there may
-be discrepancies to deal with between different communicator pairs,
-but these can be treated either as inconsistencies to be 'corrected',
-or as exceptions that just have to be remembered.
-
-** Language
-
-A language is a set of practices used by individual agents in
-communicating with another agent.  From the perspective of this point
-in the exposition, a language would be simply a correspondence between
-a number of sentences and their meanings, but we would want to expand
-this to other practices as we look further.
-
-** Power PO
-
-An interaction can 'go bad' in that agent A can say something,
-expecting a positive payoff to both A and the listening agent B, but
-one or the other payoff turns out to be zero or negative.  The 
-payoffs depend on the behavior of both agents ('saying the right thing' and
-'doing the right thing'), so it is possible that the payoffs can be positive if
-either A or B changes its behavior.  There may be a choice to be made
-between A changing or B changing, if either change will lead to
-positive payoffs.  In this situation there can be a negotiation to
-determine which one changes.
-
-In some cases negotiation is impossible because feedback
-is impossible or rejected, but suppose that it is possible.
-
-Typically neither agent really wants to change.  The consequences of
-the negotiation go beyond just this one interaction since the changing
-agent will have to decide whether to apply its change to future
-interactions with the other agent, and to its interactions with other
-agents.
-
-If the negotiation leads to A changing what it says, it might be
-described in normative terms as "A said the wrong thing to B, it
-should have said this other thing".  If it leads to B changing what it
-does, it might be described as "B misunderstood what A said, it should
-have understood it in this other way".
-
-A power imbalance between A and B might determine the outcome of the
-negotiation.  If A has more power than B, then it may feel it does not
-need to change what it says, and will pressure B to "capitulate" by
-changing its behavior.  If B has more power, it may feel it does not
-need to change what it does, and it will pressure A to "capitulate" by
-changing what it says.
-
-** Objects change
-
-In order to make use of an object hypothesis when appropriate an agent
-must be able to discriminate situations where the hypothesis is likely
-to work (the object is 'identified') and those where it is not (what
-is seen is not 'identified' as the object).
-
-The theory implies some position on the Ship of Theseus.  What is it?
-
-** Child development
-
-Infants learn meaning quickly and apparently with very little data.
-Is what an infant does consistent with what I've outlined?
+filling", but only under certain circumstances - if it understands the
+entity's constraint network.  I should be able to spell out the
+implications of the theory for 'knowledge representation' and robot
+language.]
 
 ** What does this have to do with HTTPrange-14?
 
-The infamous HTTPrange-14 question hinged on what a particular kind of
-URL (or URI) refers to, and years of bickering by many very clever
-people didn't lead to any progress on the question.
+The infamous HTTPrange-14 question (World Wide Web consortium,
+2003-2011) hinged on what a particular kind of URL (or URI) refers to,
+and years of bickering by many very clever people didn't lead to any
+progress on the question.
 
 https://en.wikipedia.org/wiki/HTTPRange-14
+
+E.g. does the URL https://en.wikipedia.org/wiki/Magna_Carta refer to
+the Magna Carta, the document prepared circa June 1215, or does it
+refer to a Wikipedia article about the Magna Carta?  The things you
+say about the two are incompatible, so to avoid confusion it would be
+helpful to know which was intended, and to assist machine processing
+it would be helpful if the intent were agreed on in a systematic way,
+not just for this one URL.
+
+Well, if it did refer to one of the two, how would one know?  Or if we
+wanted it to refer to one and not the other, what guidance would we
+give to application developers?
 
 Standards are most successful when they are accompanied by good unit
 tests, so in order to steer the group away from metaphysics and
 bullying, I asked the question, how would someone write a unit test to
-detect variance against _any_ requirement having to do with reference?
-There was no answer to this question.
+detect variance against /any/ requirement having to do with reference?
+I didn't receive any answer.
+
 * Prior work
 
 Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Chomsky,
-Kripke, Horwich, Harman, Millikan, Gopnik, Yablo, Gibson (From Naming
-to Saying), many others.
+Kripke, Horwich, Millikan, Brian Cantwell Smith, Gopnik, Yablo, Martha
+Gibson (/From Naming to Saying/), Bogdan (/Predicative Minds/),
+Boersema (/Pragmatism and Reference/), Reddy ("conduit metaphor"),
+many others.  Maybe Austen.
 
 Criticizing the existing literature is like 'shooting fish in a
 barrel'; none of it is very good in my opinion.  This is why I'm
-putting off the task of doing a coherent literature review.
+putting off the task of doing a literature review.
 
 * Acknowledgments
 
@@ -697,7 +654,7 @@ this work.
 Thanks to Christine Lemuel-Webber and Alan Ruttenberg for comments.
 
 
-* Further material on entities
+* Other topics TBD
 
 This section is a junkyard of entity-related topics.
 
@@ -866,10 +823,115 @@ propositions and objects, and the latter implies the former.
 ** Gestalt and mereology
 Maybe this goes in some other section.
 
+An object, and a part of that object, are different entities; perhaps
+the part is a subnetwork of the whole's constraint network.
+Explain.
+
 ** Coordinate systems and effective variables
 
 Suppose that the world has some kind of space with a geometry.
 Consider a variable defined by a coordinate system on the space
 together with operations that can be performed in reference to the
 coordinate system.
+
+** Objects change
+
+In order to make use of an object hypothesis when appropriate an agent
+must be able to discriminate situations where the hypothesis is likely
+to work (the object is 'identified') and those where it is not (what
+is seen is not 'identified' as the object).
+
+The theory implies some position on the Ship of Theseus.  What is it?
+
+
+** Drifting
+write me
+
+consider a world without a fixed substrate, in which the agent drifts,
+and other things drift by it.  Locations are not unconstrained, but
+are relativey so.  What does this do to the pressure and/or ability to
+make use of compositional semantics?  Would we get
+compositionality in an ocean ecosystem?...
+
+** Species (generic individuals)
+
+Canonically we think of reference as being to particular physical
+individuals, but in ordinary language it is also common to refer to
+generic individuals such as The Redwing Blackbird - not referring to
+the class, but to a single idealized, canonical, or archetypal bird.
+When I was in Peru I was told that all capybaras were called Charlie
+and all toucans were Poncho, almost as if there was only one of them.
+(but perhaps these references were more like pronouns than generic
+individuals, I don't know.)  Is either of these two modes prior?
+
+** Cheating
+
+Suppose A says something and B acts in response.  If A receives a
+positive payoff but B receives a negative payoff (i.e. penalty), we
+might say A 'lied' to B or A 'tricked' B or A said something that
+wasn't 'true'.  (It's also possible that A made a mistake.)
+
+If A receives a negative payoff and B a positive payoff, we could say
+B 'betrayed' A by performing an action not favorable to A, when A
+trusted B to perform the favorable action it expected.
+(But it's also possible that B made a mistake).
+
+** Community
+
+In principle, language could be negotiated independently between each
+pair of communicators, but in practice the is little cost and enormous
+benefit for an agent to be able to use the same language with multiple
+speakers.  Doing so reduces learning time and the potential for
+mistakes.  An agent can learn language from one source and then
+practice it with another.  In a community of language users there may
+be discrepancies to deal with between different communicator pairs,
+but these can be treated either as inconsistencies to be 'corrected',
+or as exceptions that just have to be remembered.
+
+** Language
+
+A language is a set of practices used by individual agents in
+communicating with another agent.  From the perspective of this point
+in the exposition, a language would be simply a correspondence between
+a number of sentences and their meanings, but we would want to expand
+this to other practices as we look further.
+
+** Semantics and power struggles
+
+An interaction can 'go bad' in that agent A can say something,
+expecting a positive payoff to both A and the listening agent B, but
+one or the other payoff turns out to be zero or negative.  The 
+payoffs depend on the behavior of both agents ('saying the right thing' and
+'doing the right thing'), so it is possible that the payoffs can be positive if
+either A or B changes its behavior.  There may be a choice to be made
+between A changing or B changing, if either change will lead to
+positive payoffs.  In this situation there can be a negotiation to
+determine which one changes.
+
+In some cases negotiation is impossible because feedback
+is impossible or rejected, but suppose that it is possible.
+
+Typically neither agent really wants to change.  The consequences of
+the negotiation go beyond just this one interaction since the changing
+agent will have to decide whether to apply its change to future
+interactions with the other agent, and to its interactions with other
+agents.
+
+If the negotiation leads to A changing what it says, it might be
+described in normative terms as "A said the wrong thing to B, it
+should have said this other thing".  If it leads to B changing what it
+does, it might be described as "B misunderstood what A said, it should
+have understood it in this other way".
+
+A power imbalance between A and B might determine the outcome of the
+negotiation.  If A has more power than B, then it may feel it does not
+need to change what it says, and will pressure B to "capitulate" by
+changing its behavior.  If B has more power, it may feel it does not
+need to change what it does, and it will pressure A to "capitulate" by
+changing what it says.
+
+** Child development
+
+Infants learn meaning quickly and apparently with very little data.
+Is what an infant does consistent with what I've outlined?
 
