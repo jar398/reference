@@ -1,13 +1,17 @@
-#+TITLE: Demystifying compositional semantics - a prospectus
+#+TITLE: Understanding compositional semantics
+#+latex_header: \hypersetup{colorlinks=true,linkcolor=blue}
+#+latex_class_options: [12pt]
+
 
 * Forward
 
 This document is not intended to be a complete report but rather an
-outline or prospectus.  Its purpose is to help recruit collaborators
-and readers for future documents.
+outline or prospectus.  Its purposes are to get high-level feedback on
+the project and to help recruit collaborators and readers for future
+versions of this document.
 
 To criticize or copy-edit something so unfinished and imperfect would
-not be difficult.  I'm not sure it's a good use of time given that
+be very easy.  I'm not sure it's a good use of time given that
 whole sections may be dropped or rewritten.  The kind of help I'm
 looking for is advice on what is being said and on the overalll
 structure of the exposition.
@@ -44,7 +48,7 @@ However, the theory goes beyond reference, and to the extent it
 succeeds, it should shed light on a variety of puzzles around
 language.
 
-The core of the presentation is in four parts.  Part 1 presents an
+The core of the exposition is in four parts.  Part 1 presents an
 'ontology', which can be taken to be either the description of a
 contrived world, or an abstraction of the real world.  Part 2 talks
 about agents, which are entities that 'act' in and on the world and
@@ -241,187 +245,13 @@ We may choose to analyze the world, or part of it, in a new coordinate
 system based on a transformation that tracks variables and constraints
 that we care about.
 
-* Further material on entities
-
-SKIP THIS SECTION AND GO ON TO AGENTS.
-
-There's a lot of fun material here but it is probably not all
-necessary to the narrative.
-
-Need to figure out a natural ordering of these topics, if I do decide
-to include them.
-
-Probably I should just flush the entire section.
-
-** Continuity and tracking
-
-Write me. Why do I want to introduce continuity right at this point,
-as opposed to doing constraints and clusters first? -- continuity is
-deeply tied to clusters, and should come in later.
-
-The cups and ball game, or shell game, or some 'simpler' variant
-
-#+BEGIN_EXAMPLE
-  Some ASCII art perhaps.
-#+END_EXAMPLE
-
-** Goes with - objects - needs work
-
-FLUSH / REWORK without mentioning objects
-
-Unlike in many conventional treatments (e.g. Aristotle, Leibniz, BFO),
-objects are absent from this model of the world so far.
-This is because of the intent to understand what an agent is up
-against in living and communicating in the world, and agents do not
-have a direct way to detect objects.  Objects cannot be sensed or
-measured; they have to be imputed from experience.
-
-In the conventional view, we say there is an object x, and it has
-properties P1(x), P2(x), and so on, and therefore it has property
-P(x).  Here we cannot start with an object.  Rather we have:
-
-  1. first, a set of observations Q1, Q2, and so on,
-  2. then we connect them to one another; the pattern of connection we
-     identify as an 'object' x,
-  3. only then can we say that Q1 = P1(x) i.e. the proposition Q1 says
-     that x has property P1, or is 'about' x.
-
-If the mutual information is high, i.e. if knowing X is nearly as good
-as knowing Y, I'll say that X "goes with" Y or that X and Y "go
-together".
-
-** Proxies
-
-If it is difficult or dangerous to read a variable, say x, directly,
-it can be helpful to identify a second variable y that can provide information
-about x.
-
-For example, it might take time and energy to determine the sugar
-content of nectar hidden deep inside a flower, but other variables,
-such as the flower's color or shape, can act as a less 'expensive'
-proxy for the desired information.
-
-We can come to know constraints such as these through 'experience',
-i.e. by watching how they change through time.  If they change
-together we have a constraint, and if they change independently they
-don't.
-
-If we were to observe these three variables - nectar sugar content,
-color, and shape - were unconstrained, we might just say that it is
-because they are all part [trails off]
-
-** Haecceity / unknowns
-We like to track things because the thing carries something of value:
-either information or assets (e.g. food).  Or, we might want to track
-speculatively, based on expectation that tracking will pay off.
-** Recovering objects from propositions
-
-[I need to rewrite this for approachability.  I need an example where
-we have a set of variables that are sensors or detectors aimed at some
-part of the world, and various objects come into that part of the world
-and are sensed, and by 'identifying' one we come to know properties
-that are otherwise expensive to detect.
-
-And maybe the entities described here - constrained variable sets -
-should not be called 'objects' even if they are isoontic with
-objects.  But then what they should be called?]
-
-From a set of variables K = {X1, X2, ... Xn} we can ask, what other
-variables can be predicted from the variables in K (over some region)?
-The collection of all such variables would be a larger set K'
-containing K.
-
-Since variables that are merely functions of the variables in K cannot
-have any new information, we are really asking about regularities in
-the system: what can we predict about the system based on what we
-already know?
-
-I hypothesize that what you and I would identify as an object in
-the system corresponds to a set K' of variables with mutual
-information; and vice versa, if we have a maximal set K', then there
-is a corresponding object.  That is, maximal mutual dependent variable
-sets are equivalent to objects.
-
-[Yes I'm playing fast and loose with the cardinality of K'.  There is
-also some question about the properties of these maximal collections
-K': are they unique etc.  Future work.]
-
-If K' doesn't add 'much' to K, i.e. if K doesn't predict much, then we
-don't have much of an object.  It would be nice to have a way to
-exclude random collections of variables as identifying sets.
-
-Note that multiple distinct sets K, even minimal ones (no subset
-also identifies K'), could identify the same object K'.  That is, an
-object might be identified in a variety of ways.
-
-When we assess mutual information there are several kinds of
-variation over which we might sample:
-  1. All or most of the variables change at once; this could be due to
-     the variables coming under control of some common object (it
-     'moves into view').
-  2. When an object is replaced by a similar but
-     distinguishable cause.
-  3. A change to an object that doesn't
-     reflect replacement with a different object, such as when a cuttlefish changes
-     its color, or a computer monitor displays a different picture.
-  4. Noise, as when a sensor is itself probabilistic.
-
-[TBD: mutual information when we're dealing with multiple variables is
-mathematics I don't understand - this part needs to be tightened up]
-
-One motivation for a probabilistic approach with multiple regions is
-that it allows objects to change without immediately becoming
-unrecognizable.  (The Ship of Theseus paradox has different answers
-depending on the choice of region.)
->>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
-
-** Leibniz
-
-[digression into Leibniz - if you something's properties, you know
-whether the something is a given object - or, an object is determined
-by its properties]
-
-** Choosing (orienting to) a subject...
-** Decomposing proposition into predicate + subject
-Write me.  I define 'predicate' and 'subject' here are 
-semantic, not syntactic.  (The syntactic terms would ne
-'predicate phrase' and 'subject phrase'.)
-*** Property
-
-A variable is a property of an object if has a dependence on the
-object's other properties.  (or something like that.)
-????
-A variable is a property of an object if it belongs to the object's
-variable set K'.  (?)
-
-** Aboutness
-
-A variable (and in particular a proposition) is about an object iff
-its value is sensitive to the properties of the object, i.e. there is
-some change to one of the object's properties that could
-cause the value of the variable to change.
-
-Aboutness is similar to propertyhood in being a relationship between
-propositions and objects, and the latter implies the former.
-
-[As usual, choice of region is important.]
-
-** Gestalt and mereology
-Maybe this goes in some other section.
-
-** Coordinate systems and effective variables
-
-Suppose that the world has some kind of space with a geometry.
-Consider a variable defined by a coordinate system on the space
-together with operations that can be performed in reference to the
-coordinate system.
-
 * Agents
 
 An agent is an information processing system of some sort: something
-that acts on its environment; not passively like a rock or hammer, but
-actively by sensing its environment and acting on it.  Examples:
-robot, human, vervet monkey, character in a video game.
+that acts on its environment.  Not passively like a rock or hammer,
+but actively by sensing its environment and acting on it in a way that
+is senstive to what it sensed.  Examples: robot, human, vervet monkey,
+character in a video game.
 
 (The agent's environment is all of the rest of the world other than
 the agent.)
@@ -525,6 +355,7 @@ cooperative.  If cooperation were the focus of this prospectus, it
 would be important to distinguish factual payoff from expected payoff.
 
 ** Dualities
+
 * Communication
 ** Channel
 
@@ -602,7 +433,7 @@ on which speakers/listeners are involved).
 The meaning of a sentence is a proposition; specifically, a
 proposition that is true if and only if the sentence is sayable.
 
-Presumably the sentence is sayable (or not) _because_ the proposition
+Presumably the sentence is sayable (or not) /because/ the proposition
 is true (false), but such causation would usually be complex.
 Fortunately we don't need to understand what the causation is.
 
@@ -847,9 +678,12 @@ There was no answer to this question.
 * Prior work
 
 Leibniz, Frege, Russell, Wittgenstein, Skinner, Quine, Chomsky,
-Kripke, Horwich, Harman, Millikan, Gopnik, Yablo, many others.
+Kripke, Horwich, Harman, Millikan, Gopnik, Yablo, Gibson (From Naming
+to Saying), many others.
 
-'shooting fish in a barrel'
+Criticizing the existing literature is like 'shooting fish in a
+barrel'; none of it is very good in my opinion.  This is why I'm
+putting off the task of doing a coherent literature review.
 
 * Acknowledgments
 
@@ -861,4 +695,181 @@ taught me a lot about model theory and was a major inspiration for
 this work.
 
 Thanks to Christine Lemuel-Webber and Alan Ruttenberg for comments.
+
+
+* Further material on entities
+
+This section is a junkyard of entity-related topics.
+
+There's a lot of fun material here but it is probably not all
+necessary to the narrative.
+
+Need to figure out a natural ordering of these topics, or find places
+in the previous text where they might fit, if I do decide to include
+them at all.
+
+I might flush all of this.
+
+** Continuity and tracking
+
+Write me. Why do I want to introduce continuity right at this point,
+as opposed to doing constraints and clusters first? -- continuity is
+deeply tied to clusters, and should come in later.
+
+The cups and ball game, or shell game, or some 'simpler' variant
+
+#+BEGIN_EXAMPLE
+  Some ASCII art perhaps.
+#+END_EXAMPLE
+
+** Goes with - objects - needs work
+
+FLUSH / REWORK without mentioning objects
+
+Unlike in many conventional treatments (e.g. Aristotle, Leibniz, BFO),
+objects are absent from this model of the world so far.
+This is because of the intent to understand what an agent is up
+against in living and communicating in the world, and agents do not
+have a direct way to detect objects.  Objects cannot be sensed or
+measured; they have to be imputed from experience.
+
+In the conventional view, we say there is an object x, and it has
+properties P1(x), P2(x), and so on, and therefore it has property
+P(x).  Here we cannot start with an object.  Rather we have:
+
+  1. first, a set of observations Q1, Q2, and so on,
+  2. then we connect them to one another; the pattern of connection we
+     identify as an 'object' x,
+  3. only then can we say that Q1 = P1(x) i.e. the proposition Q1 says
+     that x has property P1, or is 'about' x.
+
+If the mutual information is high, i.e. if knowing X is nearly as good
+as knowing Y, I'll say that X "goes with" Y or that X and Y "go
+together".
+
+** Proxies
+
+If it is difficult or dangerous to read a variable, say x, directly,
+it can be helpful to identify a second variable y that can provide information
+about x.
+
+For example, it might take time and energy to determine the sugar
+content of nectar hidden deep inside a flower, but other variables,
+such as the flower's color or shape, can act as a less 'expensive'
+proxy for the desired information.
+
+We can come to know constraints such as these through 'experience',
+i.e. by watching how they change through time.  If they change
+together we have a constraint, and if they change independently they
+don't.
+
+If we were to observe these three variables - nectar sugar content,
+color, and shape - were unconstrained, we might just say that it is
+because they are all part [trails off]
+
+** Haecceity / unknowns
+We like to track things because the thing carries something of value:
+either information or assets (e.g. food).  Or, we might want to track
+speculatively, based on expectation that tracking will pay off.
+** Recovering objects from propositions
+
+[I need to rewrite this for approachability.  I need an example where
+we have a set of variables that are sensors or detectors aimed at some
+part of the world, and various objects come into that part of the world
+and are sensed, and by 'identifying' one we come to know properties
+that are otherwise expensive to detect.
+
+And maybe the entities described here - constrained variable sets -
+should not be called 'objects' even if they are isoontic with
+objects.  But then what they should be called?]
+
+From a set of variables K = {X1, X2, ... Xn} we can ask, what other
+variables can be predicted from the variables in K (over some region)?
+The collection of all such variables would be a larger set K'
+containing K.
+
+Since variables that are merely functions of the variables in K cannot
+have any new information, we are really asking about regularities in
+the system: what can we predict about the system based on what we
+already know?
+
+I hypothesize that what you and I would identify as an object in
+the system corresponds to a set K' of variables with mutual
+information; and vice versa, if we have a maximal set K', then there
+is a corresponding object.  That is, maximal mutual dependent variable
+sets are equivalent to objects.
+
+[Yes I'm playing fast and loose with the cardinality of K'.  There is
+also some question about the properties of these maximal collections
+K': are they unique etc.  Future work.]
+
+If K' doesn't add 'much' to K, i.e. if K doesn't predict much, then we
+don't have much of an object.  It would be nice to have a way to
+exclude random collections of variables as identifying sets.
+
+Note that multiple distinct sets K, even minimal ones (no subset
+also identifies K'), could identify the same object K'.  That is, an
+object might be identified in a variety of ways.
+
+When we assess mutual information there are several kinds of
+variation over which we might sample:
+  1. All or most of the variables change at once; this could be due to
+     the variables coming under control of some common object (it
+     'moves into view').
+  2. When an object is replaced by a similar but
+     distinguishable cause.
+  3. A change to an object that doesn't
+     reflect replacement with a different object, such as when a cuttlefish changes
+     its color, or a computer monitor displays a different picture.
+  4. Noise, as when a sensor is itself probabilistic.
+
+[TBD: mutual information when we're dealing with multiple variables is
+mathematics I don't understand - this part needs to be tightened up]
+
+One motivation for a probabilistic approach with multiple regions is
+that it allows objects to change without immediately becoming
+unrecognizable.  (The Ship of Theseus paradox has different answers
+depending on the choice of region.)
+>>>>>>> de498eb531d612727bf2b0759ad6d44d701a5a8c
+
+** Identity and Leibniz
+
+[digression into Leibniz - if you know something's properties, you know
+whether the something is some given entity - or, an object is determined
+by its properties]
+
+** Choosing (orienting to) a subject...
+** Decomposing proposition into predicate + subject
+Write me.  I define 'predicate' and 'subject' here are 
+semantic, not syntactic.  (The syntactic terms would ne
+'predicate phrase' and 'subject phrase'.)
+*** Property
+
+A variable is a property of an object if has a dependence on the
+object's other properties.  (or something like that.)
+????
+A variable is a property of an object if it belongs to the object's
+variable set K'.  (?)
+
+** Aboutness
+
+A variable (and in particular a proposition) is about an object iff
+its value is sensitive to the properties of the object, i.e. there is
+some change to one of the object's properties that could
+cause the value of the variable to change.
+
+Aboutness is similar to propertyhood in being a relationship between
+propositions and objects, and the latter implies the former.
+
+[As usual, choice of region is important.]
+
+** Gestalt and mereology
+Maybe this goes in some other section.
+
+** Coordinate systems and effective variables
+
+Suppose that the world has some kind of space with a geometry.
+Consider a variable defined by a coordinate system on the space
+together with operations that can be performed in reference to the
+coordinate system.
 
