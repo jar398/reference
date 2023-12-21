@@ -1,4 +1,4 @@
-#+TITLE: Understanding compositional semantics
+#+TITLE: Analyzing compositional semantics
 #+latex_header: \hypersetup{colorlinks=true,linkcolor=blue}
 #+latex_class_options: [12pt]
 
@@ -14,25 +14,26 @@ To criticize or copy-edit something so unfinished and imperfect would
 be very easy.  I'm not sure it's a good use of time given that
 whole sections may be dropped or rewritten.  The kind of help I'm
 looking for is advice on what is being said and on the overalll
-structure of the exposition.
+structure of the exposition.  Does it make sense?  Is it nontrivial?
 
 * Introduction
 
 Compositional semantics refers to a situation where a sentence
 composed of parts (words, phrases) comes to have a meaning that
-derives from the meanings of the parts.  Use of compositional
-semantics is the distinctive and most consequential way in which the
-human species differs from other living things.  Because of it,
-sentences that have never before been uttered can be understood by
-agents that have never heard them. My aim here is to explain how to
-reduce compositional semantics to physical phenomena, freeing it from
-magical, subjective, or "intentional" explanations, subjecting it to
-scientific study, and enabling principled use in engineering.
+derives from the meanings of the parts, as opposed to a meaning that
+is bespoke to that sentence.  Use of compositional semantics is the
+distinctive and most consequential way in which the human species
+differs from other living things.  Because of it, sentences that have
+never before been uttered can be understood by agents that have never
+heard them. My aim here is to explain how to reduce compositional
+semantics to physical phenomena, freeing it from magical, subjective,
+or "intentional" explanations, subjecting it to scientific study, and
+enabling principled use in engineering.
 
 (It might be helpful to review the SEP article on compositionality:
 https://plato.stanford.edu/entries/compositionality/)
 
-Reference turns out to be the central roadblock in accounting for
+/Reference/ is the central roadblock in accounting for
 compositional language.  If we knew what reference was, we could
 explain the mechanics of compositional language.  The main motivating
 question for the theory is the nature of reference, made operational
@@ -40,7 +41,7 @@ by the following question:
 
     #+BEGIN_QUOTE
     Suppose somebody claims that a phrase N refers to some
-    entity O.  How do we assess the validity of such a claim?  What
+    object O.  How do we assess the validity of such a claim?  What
     evidence do we bring to bear one way or the other?
     #+END_QUOTE
 
@@ -51,7 +52,7 @@ language.
 The core of the exposition is in four parts.  Part 1 presents an
 'ontology', which can be taken to be either the description of a
 contrived world, or an abstraction of the real world.  Part 2 talks
-about agents, which are entities that 'act' in and on the world and
+about agents, which are objects that 'act' in and on the world and
 interact with one another.  Part 3 is about communication between
 agents.  Finally, part 4 gets to the main topic of compositionality.
 
@@ -198,16 +199,21 @@ to some degree, we can usually identify more or less discrete networks
 consisting of constrainted parts, which can also be described as
 clusters of mutually constrained variables.
 
-These clusters tend to be called "things" or "objects" or "entities".
-Their variables reflect the condition of their parts, and their
-constraints reflect the arrangement and function of the parts.  
+These clusters tend to be associated with "things" or "objects" or
+"entities".  Their variables reflect the condition of their parts or
+aspects, and their constraints reflect the arrangement and function of
+the parts.
 
-I'll use "entity" as it is the most neutral and abstract of these
-words.
+I'll use "object" as it is least awkward, even though "entity" or
+something else might be better.  "Object" implies more of a commitment
+than I would like; I do not mean to imply by it a connected physical
+obect with clear boundaries, or anything quite so crisp.  An object
+could be any collection of constrained variables: a cloud, a city, a
+shadow, etc.
 
 The point of all this analysis is to say that variables (including
 propositions) are the correct starting point for ontology, and
-entities are secondary since they emerge from ensembles of variables
+objects are secondary since they emerge from ensembles of variables
 and their constraints.  You can take this as a claim about our world,
 or about the contrived world I am presenting, or as a philosophical
 position.
@@ -248,11 +254,10 @@ that we care about.
 An agent is an information processing system of some sort: something
 that acts in response to, and on, its environment. The mechanism is
 not passive like a rock or hammer, but active in that the environment
-is sensed and actions are chosen in a way that is senstive in a
+is sensed and actions are chosen in a way that is sensitive in a
 complex way to what is sensed.
 
 Examples: robot, human, vervet monkey, character in a video game.
-
 
 ** Sensors and actuators
 
@@ -278,16 +283,18 @@ additional memories and/or to transmit information to its environment.
 Thus, agents have parts we'll call 'sensors': detectors of light,
 sound, touch, etc.  A sensor has the function of establishing a
 constraint between a variable outside the agent and one inside the
-agent.
+agent (in the sensor).
 
-Actuators are the same but in the opposite causal and temporarl
+Actuators are the same but in the opposite causal and temporal
 direction.  An actuator estabishes a constraint between a variable
 inside the agent (what it "wants to do") and one outside the agent
 (some change that is effected).
 
 ** Virtual sensors and actuators
 
-An agent may take in sensor information in a series of processing steps.
+An agent may take in sensor information in a series of processing
+steps (and, dually, activate an actuator following a series of
+processing steps).
 
 At the agent/environment interface, there is a physical linkage
 between the state of some part of the environment and the state of
@@ -301,9 +308,9 @@ at that time.
 Typically there is 'circuitry' to process and combine signals coming
 from sensors.  The output point of such circuitry is a manifest
 variable which, because its value/state is derived from sensor states,
-might be called a 'virtual sensor'.  For simplicity I will sometimes
-simply use the word 'sensor' for either a sensor or a virtual sensor.
-If readers object I will reconsider this terminology.
+might be called a 'virtual sensor'.  For simplicity I will simply use
+the word 'sensor' for either a sensor or a virtual sensor.  If readers
+object I will reconsider this terminology.
 
 ['virtual sensor' is maybe not a good term.  think about this.]
 
@@ -318,7 +325,7 @@ An example of such circuitry is tracking.  As something in the
 environment moves, or as the agent or one of its sensor-carrying parts
 (e.g. eye or ear) moves, the agent may have virtual sensors whose
 values correspond to the position or other properties of the moving
-entity.  The virtual sensor is a complicated function of actual
+object.  The virtual sensor is a complicated function of actual
 sensors.
 
 Some important kinds of sensation may be elicited by the agent
@@ -331,9 +338,9 @@ available in other ways.
 Agents may derive benefit or harm from what happens to them, including
 their own actions.  The benefit or harm is detected through their
 senses, perhaps with some delay.  I think of the payoff as a numerical
-quantity, intended to model fitness (in an evolved species), money (in
-a commercial product), points (in a game), happiness, etc.  But I do
-not care to develop this formally.
+quantity, intended to model fitness (in an evolved species), profit
+(in a commercial product), points (in a game), happiness, etc.  But I
+do not care to develop this formally.
 
 An agent will, other things being equal, tend to choose the highest
 payoff (or expected payoff) action, if it has a choice.
@@ -345,30 +352,43 @@ if the expected payoff (under justifiable expectations) to both agents
 is positive.  I take this as an axiomatic definition of cooperation.
 
 When the payoff is positive for one agent but not the other, the
-interaction is exploitative.  We tend to call this "cheating".
-
+interaction is exploitative.  We tend to call this "cheating".  
 Voluntary non-cooperative interactions tend to be extinguished over
 time, since the exploited agent will tend to learn to stay out of them.
 Such an interaction pattern cannot be maintained indefinitely without
 coercion.
 
-Ordinarily we would judge cooperation by intent; that is, an agent
+One might be tempted to judge cooperation by intent; that is, an agent
 might intend to produce positive payoffs, but might 'make a mistake'
 or 'be the victim of bad information' or the interaction might not
-turn out well due to 'bad luck'.  We might still call their behavior
-cooperative due to /expected/ payoffs over time.  If cooperation were
-the focus of this prospectus, it would be important to distinguish
-short-tem payoff from expected payoff.
+turn out well due to 'bad luck'.  This is really a kind of
+amortization.  We might still call their behavior cooperative due to
+/expected/ payoffs over time.  If cooperation were the focus of this
+prospectus, it would be important to distinguish short-tem payoff from
+expected payoff.
 
-** Dualities
+** Object hypotheses
 
-Agent / environnment
+Common sense suggests that agents perceive objects, but objects are
+not sensed or manipulated directly.  The agent's sense that there is
+an object has to be explained in terms of the apparatus it has on hand
+(sensors and actuators), just as the objects themselves had to be
+explained in terms of variables and constraints.
 
-Sensor / actuator
+Sensors receive information from the agent's environment by relaying
+state across the agent/environment boundary.  The agent can detect
+which variables (thus read) 'go with' which other ones (are predictive
+of the others, similar to 'correlated'), and we can suppose that they
+form 'object hypotheses' consisting of variables that they know about
+that seem to go together (are mutually constrained).
 
-Input / output
+Object hypotheses help agents make predictions, and better predictions
+lead to higher payoffs (following).  Given enough variable
+observations to 'identify' a particular constraint network, other
+unobserved variable values may be predicted.
 
-etc.
+Prediction is the entire purpose of object perception, the reason that
+agents have such a facility at all.
 
 * Communication
 ** Channel
@@ -532,19 +552,7 @@ hypothesis.  The hypothesis in turn can be consulted to determine what
 ingredients should be used, by asking it what one would observe should
 the request be successfully carried out.
 
-** Object hypothesis
-
-Common sense tells us that agents perceive objects, but this has to be
-explained in terms of the apparatus built up so far (variables,
-sensors, ...).
-
-Sensors obtain information from the agent's environment by relaying
-state across the agent/environment boundary.  The agent can detect
-which variables (thus read) 'go with' which other ones (are predictive
-of the others, similar to 'correlated'), and we can suppose that they
-form 'object hypotheses' consisting of variables that they know about
-that go together.  Object hypotheses help them make predictions, and
-better predictions lead to higher payoffs.
+** Shared object hypotheses
 
 If two agents are together in a region, they are 'likely' to form
 similar object hypotheses when 'looking at' the same parts of the
@@ -599,7 +607,7 @@ Sounds like a system of simultaneous equations to me.
 [Placeholder.  If I'm right then I've established that a computer
 really is capable of genuine meaning and reference, not just "form
 filling", but only under certain circumstances - if it understands the
-entity's constraint network.  I should be able to spell out the
+object's constraint network.  I should be able to spell out the
 implications of the theory for 'knowledge representation' and robot
 language.]
 
@@ -612,13 +620,14 @@ progress on the question.
 
 https://en.wikipedia.org/wiki/HTTPRange-14
 
-E.g. does the URL https://en.wikipedia.org/wiki/Magna_Carta refer to
-the Magna Carta, the document prepared circa June 1215, or does it
-refer to a Wikipedia article about the Magna Carta?  The things you
-say about the two are incompatible, so to avoid confusion it would be
-helpful to know which was intended, and to assist machine processing
-it would be helpful if the intent were agreed on in a systematic way,
-not just for this one URL.
+E.g. does the URL https://en.wikipedia.org/wiki/Magna_Carta refer (in
+a language in which URLs refer) to the Magna Carta, the document
+prepared circa June 1215, or does it refer to a Wikipedia article
+about the Magna Carta?  The things you say about the two objects are
+incompatible, so to avoid confusion it would be helpful to know which
+was intended, and to assist machine processing it would be helpful if
+the intent were agreed on in a systematic way, not just for this one
+URL.
 
 Well, if it did refer to one of the two, how would one know?  Or if we
 wanted it to refer to one and not the other, what guidance would we
@@ -644,19 +653,19 @@ putting off the task of doing a literature review.
 
 * Acknowledgments
 
-Much indebted to Brian Cantwell Smith, Henry S. Thompson, Alan Renear,
-and Gerry Sussman for ongoing moral support.
+I'm much indebted to Brian Cantwell Smith, Henry S. Thompson, Alan
+Renear, and Gerry Sussman for ongoing encouragement.
 
-Pat Hayes advised the W3C TAG on matters of reference and in doing so
-taught me a lot about model theory and was a major inspiration for
-this work.
+Pat Hayes advised a working group I participated in on matters of
+meaning and reference and in doing so taught me a lot about model
+theory.  He was a major inspiration for this work.
 
-Thanks to Christine Lemuel-Webber and Alan Ruttenberg for comments.
+Thanks to Christine Lemmer-Webber and Alan Ruttenberg for comments.
 
 
 * Other topics TBD
 
-This section is a junkyard of entity-related topics.
+This section is a junkyard of object-related topics.
 
 There's a lot of fun material here but it is probably not all
 necessary to the narrative.
@@ -667,17 +676,23 @@ them at all.
 
 I might flush all of this.
 
+** Dualities
+
+Agent / environnment
+
+Sensor / actuator
+
+Input / output
+
+etc.
+
 ** Continuity and tracking
 
-Write me. Why do I want to introduce continuity right at this point,
-as opposed to doing constraints and clusters first? -- continuity is
+Why do I want to introduce continuity? -- continuity is
 deeply tied to clusters, and should come in later.
 
-The cups and ball game, or shell game, or some 'simpler' variant
-
-#+BEGIN_EXAMPLE
-  Some ASCII art perhaps.
-#+END_EXAMPLE
+The cups and ball game, or shell game, or some 'simpler' variant gives
+a good example of the importance of continuity.
 
 ** Goes with - objects - needs work
 
@@ -736,7 +751,7 @@ part of the world, and various objects come into that part of the world
 and are sensed, and by 'identifying' one we come to know properties
 that are otherwise expensive to detect.
 
-And maybe the entities described here - constrained variable sets -
+And maybe the objects described here - constrained variable sets -
 should not be called 'objects' even if they are isoontic with
 objects.  But then what they should be called?]
 
@@ -792,7 +807,7 @@ depending on the choice of region.)
 ** Identity and Leibniz
 
 [digression into Leibniz - if you know something's properties, you know
-whether the something is some given entity - or, an object is determined
+whether the something is some given object - or, an object is determined
 by its properties]
 
 ** Choosing (orienting to) a subject...
@@ -823,7 +838,7 @@ propositions and objects, and the latter implies the former.
 ** Gestalt and mereology
 Maybe this goes in some other section.
 
-An object, and a part of that object, are different entities; perhaps
+An object, and a part of that object, are different entities.  Perhaps
 the part is a subnetwork of the whole's constraint network.
 Explain.
 
