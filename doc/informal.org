@@ -22,9 +22,10 @@ the parts involved in the use of any of our mystery words, or improve
 on those words with more principled vocabulary.
 
 A physical system manifesting communication would include parts that
-communicate (send 'messages') and are recipients of messages, channels
-such as air or water over which messages are sent, and parts that are
-of mutual concern to sender and recipient.
+communicate (send 'messages'), parts that are recipients of messages, channels
+such as air or water over which messages are sent, parts that are
+of mutual concern to sender and recipient, and linkages between the
+senders or recipients and the parts of mutual concern.
 
 One approach to the study of communication is to study the apparatus
 that accomplishes it, such as the brain of a human.  While this is
@@ -37,8 +38,8 @@ on behavior we get away from human-centrism and treat any sort of
 communicating entity uniformly.  That might be a human, monkey,
 chameleon, circulatory system of a plant, a robot, etc.
 
-I'll need an abstract term to refer to something involved in
-communication.  The word _agent_ comes from computer science and is
+I need a noncommittal term to refer to something involved in
+communication.  The word /agent/ comes from computer science and is
 appropriate because it suggests action on the world.
 
 Just as two engines with completely different internal mechanisms may
@@ -46,8 +47,13 @@ have the same external competence with regard to generating power, two
 agents with wildly different internal mechanisms may have the same
 external competence with regard to communicating.
 
-Another approach to the study of communication is _semantics_, which
+Another approach to the study of communication is /semantics/, which
 in linguistics is mainly concerned with equivalences ("same meaning")
 between sentences and between words or phrases.  Semantics of natural
 languages is an empirical study but is "disembodied" in the sense that
 its examples make no reference to any particular physical system.
+
+Yet another approach to communication is /information theory/, which
+famously has little to do with information.  Its focus is on encoding
+and compression of messages, and ideas like "channel capacity" and
+"bandwidth", not on what messages mean.
