@@ -1,0 +1,53 @@
+Some introduction-like text:
+
+Principia semantica...
+Principles of compositional semantics...
+
+Communication is mysterious.  When we try to explain it we speak of
+"facts" or "meanings" that are "conveyed" "about" "objects".  There is
+an array of words like this whose meanings are elusive, in a manner
+similar to the "phlogiston" and "humour" of medieval
+pre-scientists.  We do not know how to point to these things or
+measure them in the physical world.  Our understanding of them is
+pre-scientific.
+
+This is not to say we are wrong to speak of "meanings" and so on, or
+that these are inherently useless words; just that these abstract words
+are mysterious and demand explanations.
+
+For a proper understanding of communication we have to first embrace
+that it occurs in physical systems, so that theory is grounded in
+reality.  Observing a physical system, we should be able to point to
+the parts involved in the use of any of our mystery words, or improve
+on those words with more principled vocabulary.
+
+A physical system manifesting communication would include parts that
+communicate (send 'messages') and are recipients of messages, channels
+such as air or water over which messages are sent, and parts that are
+of mutual concern to sender and recipient.
+
+One approach to the study of communication is to study the apparatus
+that accomplishes it, such as the brain of a human.  While this is
+certainly interesting, my concern is with communication as behavior,
+not as mechanism.  This is similar to the distinction between studying
+the physics of an engine's internals (compression ratios, fuel
+composition, and so on) and what the engine does as seen from the
+outside (force exerted, acceleration, noise, and so on).  By focusing
+on behavior we get away from human-centrism and treat any sort of
+communicating entity uniformly.  That might be a human, monkey,
+chameleon, circulatory system of a plant, a robot, etc.
+
+I'll need an abstract term to refer to something involved in
+communication.  The word _agent_ comes from computer science and is
+appropriate because it suggests action on the world.
+
+Just as two engines with completely different internal mechanisms may
+have the same external competence with regard to generating power, two
+agents with wildly different internal mechanisms may have the same
+external competence with regard to communicating.
+
+Another approach to the study of communication is _semantics_, which
+in linguistics is mainly concerned with equivalences ("same meaning")
+between sentences and between words or phrases.  Semantics of natural
+languages is an empirical study but is "disembodied" in the sense that
+its examples make no reference to any particular physical system.
