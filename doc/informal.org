@@ -1,7 +1,11 @@
-Some introduction-like text:
-
 Principia semantica...
 Principles of compositional semantics...
+
+Version 3
+
+1.
+
+[v3: new through "in a manner"]
 
 Communication is mysterious.  When we try to explain it we speak of
 "facts" or "meanings" that are "conveyed" "about" "objects".  There is
@@ -21,39 +25,138 @@ reality.  Observing a physical system, we should be able to point to
 the parts involved in the use of any of our mystery words, or improve
 on those words with more principled vocabulary.
 
+[v3: new text starting "of mutual concern"]
+
 A physical system manifesting communication would include parts that
 communicate (send 'messages'), parts that are recipients of messages, channels
 such as air or water over which messages are sent, parts that are
 of mutual concern to sender and recipient, and linkages between the
 senders or recipients and the parts of mutual concern.
 
-One approach to the study of communication is to study the apparatus
-that accomplishes it, such as the brain of a human.  While this is
-certainly interesting, my concern is with communication as behavior,
-not as mechanism.  This is similar to the distinction between studying
-the physics of an engine's internals (compression ratios, fuel
-composition, and so on) and what the engine does as seen from the
-outside (force exerted, acceleration, noise, and so on).  By focusing
-on behavior we get away from human-centrism and treat any sort of
-communicating entity uniformly.  That might be a human, monkey,
-chameleon, circulatory system of a plant, a robot, etc.
+2. The study of communication
 
-I need a noncommittal term to refer to something involved in
-communication.  The word /agent/ comes from computer science and is
-appropriate because it suggests action on the world.
+[v3: mostly new or reorganized text from here on down]
+
+I thought it might be helpful to orient the current project among
+various ways that communication is addressed in the scientific literature.
+It is OK to skip this section.
+
+/Psychophysiology:/
+One approach to the study of communication is to look at the apparatus
+that accomplishes it, such as the brain of a human.  While this is
+certainly interesting, my concern is with communication per se, not
+any particular kind of mechanism that shows it.  This is similar to
+the distinction between studying the physics of an engine's internals
+(compression ratios, fuel composition, and so on) and what the engine
+does as seen from the outside (force exerted, acceleration, and
+so on).  By focusing on behavior we get away from human-centrism and
+can treat any sort of communicating entity uniformly.  That might be a
+human, monkey, chameleon, circulatory system of a plant, a robot, etc.
 
 Just as two engines with completely different internal mechanisms may
 have the same external competence with regard to generating power, two
-agents with wildly different internal mechanisms may have the same
+communicators with wildly different internal mechanisms may have the same
 external competence with regard to communicating.
 
-Another approach to the study of communication is /semantics/, which
-in linguistics is mainly concerned with equivalences ("same meaning")
-between sentences and between words or phrases.  Semantics of natural
-languages is an empirical study but is "disembodied" in the sense that
-its examples make no reference to any particular physical system.
+/Psychology:/
+Some areas of psychology are concerned with behavior as observed and
+not with apparatus.  Some psychological studies must consider the case
+where the behavior in question is communication.  I am not an expert
+in psychology and need to learn enough to be able to make a statement
+about it here.  But I am pretty sure that psychological approaches
+begin with quite different assumptions from what I'm looking for.  In
+particular the goal of psychology is to understand the (human) mind, a
+question I exclude.
 
-Yet another approach to communication is /information theory/, which
+/Linguistics, semantics, pragmatics:/
+Linguistics offers many lines of attack.  Mostly it is concerned with
+language, which of course has communication as its purpose.  Phonetics
+and grammar tell us about language but not its meaning (in the sense
+of grounding in the world).  /semantics/ in linguistics is mainly
+concerned with equivalences ("same meaning") between sentences and
+between words or phrases, but not meaning itself.  Semantics of
+natural languages is an empirical study but is "disembodied" in the
+sense that its examples make no reference to any particular physical
+system.
+
+There is also a subfield "pragmatics" relating language to the world
+which I don't know much about.  I expect the focus of pragmatics is
+the behavior of individuals and not a systems view of pairs or groups,
+but I don't know.
+
+/Information theory:/
+Yet another approach to communication is information theory, which
 famously has little to do with information.  Its focus is on encoding
-and compression of messages, and ideas like "channel capacity" and
-"bandwidth", not on what messages mean.
+and compression of messages, and transmission-related ideas like
+"channel capacity" and "bandwidth", not on what messages mean.
+
+/Technical languages:/
+"Semantics" as used in computer science comes close to providing
+grounded theories of communication, in settings where we control the
+internal apparatus (program) that creates communication.  In computer
+science meaning is described either through equivalences between
+artificial languages or through description of effects of messages.
+The effects might be input and/or output, but they are described not
+as effects on the world, but as effects on the computer's input or
+output devices.  Thus computational semantics is almost always
+"internal" (or as I sometimes like to say, /solipsistic/) as opposed
+to physical.
+
+3. Definitions
+
+/agent/ - something that communicates or is meaningfully communicated
+with (human, other mammal, robot, etc.)
+
+/channel/ - a physical medium, such as vibrating air or paper with
+writing, over which agents communicate
+
+/message/ - the physical state of a channel (perhaps spread over some
+time) indicating communication of one meaning and not another
+
+/sender/ - the agent that sends a message
+
+/receiver/ - the agent that receives a message
+
+/generation/ - an agent's creation or choice of a message in response to a
+current physical state (sensations and/or memory)
+
+/interpretation/ - an agent's creation or choice of an action in response to a
+message received over a channel
+
+/meaning/ - TBD
+
+
+4. Success
+
+A communication event (generate, send, receive, interpret) can be
+called "successful" if the outcome - the interpretation - benefits
+both sender and receiver.  The sender and receiver have cooperated
+to bring about some end.
+
+I will leave "benefit" as an abstraction but I have in mind
+"fitness" in the sense of evolution, "economical" in the sense of
+economics, or "desired" (by the designer) in the sense of a designed system.
+
+There are many ways in which communication can fail.  There may be no
+benefit to sender or receiver because the 'wrong' message is generated
+or the message is not understood.  The sender might benefit but not
+the receiver; this includes the case of "lying".  This is a sort of
+parasitism.  The receiver might benefit but not the sender; this would
+be a kind of betrayal or misplaced trust.
+
+
+5. Future sections
+
+The meaning of simple messages e.g. the calls of vervet monkeys
+
+Composition (messages built out of parts) is what makes humans unique 
+
+Why composed messages are harder than simple messages
+
+The most difficult problem is to understand simple subject/predicate sentences.
+Everything else is elaboration
+
+Reference / designation / naming
+
+Predication
+
