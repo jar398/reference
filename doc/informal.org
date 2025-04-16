@@ -3,7 +3,7 @@ Principles of compositional semantics...
 
 Version 3
 
-1.
+* Introductory
 
 [v3: new through "in a manner"]
 
@@ -33,7 +33,7 @@ such as air or water over which messages are sent, parts that are
 of mutual concern to sender and recipient, and linkages between the
 senders or recipients and the parts of mutual concern.
 
-2. The study of communication
+* The study of communication
 
 [v3: mostly new or reorganized text from here on down]
 
@@ -102,7 +102,7 @@ output devices.  Thus computational semantics is almost always
 "internal" (or as I sometimes like to say, /solipsistic/) as opposed
 to physical.
 
-3. Definitions
+* Definitions
 
 /agent/ - something that communicates or is meaningfully communicated
 with (human, other mammal, robot, etc.)
@@ -126,7 +126,7 @@ message received over a channel
 /meaning/ - TBD
 
 
-4. Success
+* Success
 
 A communication event (generate, send, receive, interpret) can be
 called "successful" if the outcome - the interpretation - benefits
@@ -145,7 +145,7 @@ parasitism.  The receiver might benefit but not the sender; this would
 be a kind of betrayal or misplaced trust.
 
 
-5. Future sections
+* Hints about future sections
 
 The meaning of simple messages e.g. the calls of vervet monkeys
 
